@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>All Tools ZyrexDep</title>
+<script>window.orbFail=function(i){var b=document.createElement("b");b.textContent="Z";i.replaceWith(b)};try{var t=localStorage.getItem("ayd_theme");if(t==="neo"||t==="pnb"||t==="nm"||t==="cave"||t==="paper")document.documentElement.setAttribute("data-theme",t);if(t==="cave"&&localStorage.getItem("ayd_cave_mode")==="light")document.documentElement.setAttribute("data-mode","light");if(t==="pnb")document.documentElement.setAttribute("data-mode",localStorage.getItem("ayd_pnb_mode")==="dark"?"dark":"light");if(t==="paper")document.documentElement.setAttribute("data-mode",localStorage.getItem("ayd_paper_mode")==="dark"?"dark":"light")}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/css/style.css?v=107">
+<style>body{-webkit-user-select:none;user-select:none}input,textarea,select,[contenteditable="true"]{-webkit-user-select:text;user-select:text}</style>
+</head>
+<body>
+<div class="cave-bg" id="caveBg" aria-hidden="true"></div>
+
+<!-- Sprite ikon SVG -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l-2 6 5 12M15 3l2 6-5 12"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M3 3l18 18"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-8 9"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="5.5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="18.5" cy="12" r="1.8"/></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><path d="M4 6h16M4 12h9M4 18h7"/><path d="M17 12v6.2"/><circle cx="15" cy="18.2" r="2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-battery" viewBox="0 0 24 24"><rect x="2" y="7" width="18" height="10" rx="3"/><path d="M22.5 10.5v3"/><path d="M6 10.5v3M10 10.5v3"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L5 13h6l-1 9 8-11h-6z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 8l-4 4 4 4M6 12h10"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 19a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9.5 4.75 4.75 0 0 1 17.5 19z"/></symbol>
+    <symbol id="i-cloudsun" viewBox="0 0 24 24"><circle cx="8" cy="8" r="2.8"/><path d="M8 2.2v1M2.2 8h1M3.9 3.9l.7.7M12.1 3.9l-.7.7"/><path d="M9 20a3.6 3.6 0 0 1-.4-7.18A5 5 0 0 1 18 11.5a4.25 4.25 0 0 1 0 8.5z"/></symbol>
+    <symbol id="i-rain" viewBox="0 0 24 24"><path d="M7 14.5a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 5.5 4.75 4.75 0 0 1 17.5 14.5z"/><path d="M8 18l-1.2 3M12.5 18l-1.2 3M17 18l-1.2 3"/></symbol>
+    <symbol id="i-storm" viewBox="0 0 24 24"><path d="M7 14a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 5 4.75 4.75 0 0 1 17.5 14"/><path d="M12.5 11l-3 5h4l-1.5 5"/></symbol>
+    <symbol id="i-fog" viewBox="0 0 24 24"><path d="M7 13a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 4 4.75 4.75 0 0 1 17.5 13z"/><path d="M4 17h16M7 21h10"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 10v9a1 1 0 0 0 1 1h3.5v-5.5h3V20H17a1 1 0 0 0 1-1v-9"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 16v4M17 18h4"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1z"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L3 11l7 3 3 7z"/><path d="M10 14l11-11"/></symbol>
+    <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M8.5 7.5h7M9 12h.01M12 12h.01M15 12h.01M9 16h.01M12 16h.01M15 16h.01"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M14 3v5h5M8.5 13h7M8.5 17h5"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6.5 7l1 13h9l1-13M10 11v6M14 11v6"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M5 7.5c4-1.2 10-1.2 14 0M4.5 12.2c4.5-1.3 10.5-1.3 15 0M5 17c4-1.2 10-1.2 14 0"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 1.6-2.1-.5-1.3.3-2.4 1.6-2.4H17a4 4 0 0 0 4-4c0-5-4-9.5-9-9.5z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="14.5" cy="7" r="1"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3"/><path d="M5.5 12v8h13v-8M10 20v-4h4v4"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12.2V4.5A1.5 1.5 0 0 1 4.5 3h7.7l8.3 8.3a1.5 1.5 0 0 1 0 2.1l-7.1 7.1a1.5 1.5 0 0 1-2.1 0z"/><circle cx="8" cy="8" r="1.4"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-tv" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M8 2.5l4 3.5 4-3.5"/><path d="M10.5 10.5v4l3.5-2z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v16H5.5C4.7 20 4 19.3 4 18.5z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H13v16h5.5c.8 0 1.5-.7 1.5-1.5z"/></symbol>
+    <symbol id="i-reply" viewBox="0 0 24 24"><path d="M9.5 6L4 11.5 9.5 17"/><path d="M4 11.5h9a6.5 6.5 0 0 1 6.5 6.5v1"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.5.4.8 1 .8 1.6V16h5.4v-.5c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 3z"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1-4L16.5 4.5a2 2 0 0 1 3 3L8 19z"/><path d="M14.5 6.5l3 3"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 11l4.5 4.5 4.5-4.5M5 19h14"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.3-4.3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24"><path d="M3 8l4 3 5-6 5 6 4-3-2 10H5z"/><path d="M5 18h14"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.6"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M9.5 14.5l5-5"/><path d="M8 17l-1.5 1.5a3.5 3.5 0 0 1-5-5L3 12"/><path d="M16 7l1.5-1.5a3.5 3.5 0 0 1 5 5L21 12"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M20 8V5a1 1 0 0 0-1-1h-3M4 16v3a1 1 0 0 0 1 1h3M20 16v3a1 1 0 0 1-1 1h-3"/><path d="M4 12h16"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.2c.9 1.1 2 1.7 3.5 1.7s2.6-.6 3.5-1.7"/><path d="M9 9.6v.4M15 9.6v.4"/></symbol>
+    <symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M6 6l12 12"/></symbol>
+    <symbol id="i-verified" viewBox="0 0 24 24"><path fill="#0a84ff" stroke="none" d="M12 2.3l2.2 1.6 2.7-.6 1.2 2.5 2.5 1.2-.6 2.7L22 12l-1.6 2.2.6 2.7-2.5 1.2-1.2 2.5-2.7-.6L12 21.7l-2.2-1.6-2.7.6-1.2-2.5-2.5-1.2.6-2.7L2 12l1.6-2.2-.6-2.7 2.5-1.2 1.2-2.5 2.7.6z"/><path fill="none" stroke="#fff" stroke-width="2.2" d="M8 12.3l2.6 2.6L16.2 9"/></symbol>
+      <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7.5 4.8v14.4a.6.6 0 0 0 .9.5l11.6-7.2a.6.6 0 0 0 0-1L8.4 4.3a.6.6 0 0 0-.9.5z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24"><path d="M19 5.6v12.8a.5.5 0 0 1-.8.4L9.6 12.4a.5.5 0 0 1 0-.8l8.6-6.4a.5.5 0 0 1 .8.4z"/><path d="M5.5 5v14"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path d="M5 5.6v12.8a.5.5 0 0 0 .8.4l8.6-6.4a.5.5 0 0 0 0-.8L5.8 5.2a.5.5 0 0 0-.8.4z"/><path d="M18.5 5v14"/></symbol>
+    <symbol id="i-rew10" viewBox="0 0 24 24"><path d="M4.2 12a8 8 0 1 0 2.5-5.8"/><path d="M4 3.8v4.6h4.6"/><text x="12.2" y="15.3" text-anchor="middle" font-size="7.4" font-weight="800" fill="currentColor" stroke="none" font-family="Arial,Helvetica,sans-serif">10</text></symbol>
+    <symbol id="i-fwd10" viewBox="0 0 24 24"><path d="M19.8 12a8 8 0 1 1-2.5-5.8"/><path d="M20 3.8v4.6h-4.6"/><text x="11.8" y="15.3" text-anchor="middle" font-size="7.4" font-weight="800" fill="currentColor" stroke="none" font-family="Arial,Helvetica,sans-serif">10</text></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 7h3.2c4.6 0 5.6 10 10.3 10H21M3 17h3.2c1.6 0 2.7-.8 3.6-2M13.9 9c.9-1.3 2-2 3.6-2H21"/><path d="M18.5 4.5L21 7l-2.5 2.5M18.5 14.5L21 17l-2.5 2.5"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M17 3l3 3-3 3"/><path d="M4 11V9.5A3.5 3.5 0 0 1 7.5 6H20"/><path d="M7 21l-3-3 3-3"/><path d="M20 13v1.5a3.5 3.5 0 0 1-3.5 3.5H4"/></symbol>
+    <symbol id="i-chevd" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.5s-7.8-4.7-9.4-9.7C1.5 7.4 3.6 4.5 6.8 4.5c2 0 3.5 1.1 5.2 3.1 1.7-2 3.2-3.1 5.2-3.1 3.2 0 5.3 2.9 4.2 6.3-1.6 5-9.4 9.7-9.4 9.7z"/></symbol>
+    <symbol id="i-gamepad" viewBox="0 0 24 24"><path d="M6.5 7.5h11a4.5 4.5 0 0 1 4.4 5.4l-.7 3.4a2.7 2.7 0 0 1-4.6 1.4L14.8 16H9.2l-1.8 1.7a2.7 2.7 0 0 1-4.6-1.4l-.7-3.4a4.5 4.5 0 0 1 4.4-5.4z"/><path d="M8 10.2v3.2M6.4 11.8h3.2"/><path d="M15.4 10.9h.01M17.6 12.7h.01"/></symbol>
+    <symbol id="i-snake" viewBox="0 0 24 24"><path d="M4.5 20h9.5a4 4 0 0 0 0-8h-4a4 4 0 0 1 0-8h9.5"/><path d="M19 4l2 -1.2M19 4l2 1.2"/></symbol>
+    <symbol id="i-volume" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5l4.5 4v-13l-4.5 4z"/><path d="M15.5 9.2a4 4 0 0 1 0 5.6M18.2 6.6a8 8 0 0 1 0 10.8"/></symbol>
+    <symbol id="i-volume-off" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5l4.5 4v-13l-4.5 4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></symbol>
+    <symbol id="i-geo" viewBox="0 0 24 24"><rect x="3.5" y="12.5" width="8" height="8" rx="1.4"/><path d="M13 20.5l3.5-8 3.5 8z"/><path d="M4.5 9.5c2-4.5 5-6 8-6"/></symbol>
+    <symbol id="i-uno" viewBox="0 0 24 24"><rect x="4.5" y="5" width="10.5" height="15" rx="2.2" transform="rotate(-10 9.7 12.5)"/><rect x="9" y="4" width="10.5" height="15" rx="2.2" transform="rotate(8 14.2 11.5)"/><path d="M12.6 8.8c1.6-.4 3 .5 3.3 2.2.3 1.5-.6 2.8-2.1 3.2"/></symbol>
+    <symbol id="i-chess" viewBox="0 0 24 24"><path d="M6.5 20h11"/><path d="M8 20c.3-3.5 1.8-5.3 3.6-7-2.2-.6-4.6-1.6-4.6-4.2C7 6.2 9.2 4 12 4c3.6 0 6 2.8 6 7.6V20"/><path d="M10.3 8.6h.01"/></symbol>
+  </defs>
+</svg>
+
+
+<!-- ===== Daftar ===== -->
+<main class="screen" id="sReg">
+  <div class="auth-wrap">
+    <section class="auth glass">
+      <button class="pick" id="pick" type="button" aria-label="Pilih avatar dari galeri">
+        <svg class="i" id="pickIcon"><use href="#i-user"/></svg>
+        <span class="badge"><svg class="i"><use href="#i-plus"/></svg></span>
+      </button>
+      <h2>Buat akun</h2>
+      <p class="lead">Pilih avatar dari galeri, lalu isi username dan password.</p>
+
+      <label class="field"><svg class="i"><use href="#i-user"/></svg>
+        <input id="rUser" type="text" placeholder="Username" maxlength="24" autocomplete="username" autocapitalize="none" spellcheck="false"></label>
+      <label class="field"><svg class="i"><use href="#i-lock"/></svg>
+        <input id="rPass" type="password" placeholder="Password" maxlength="64" autocomplete="new-password">
+        <button type="button" class="eye" aria-label="Tampilkan password"><svg class="i"><use href="#i-eye"/></svg></button></label>
+      <label class="field" id="rCodeW" hidden><svg class="i"><use href="#i-shield"/></svg>
+        <input id="rCode" type="password" placeholder="Kode rahasia Developer" maxlength="40" autocomplete="off"></label>
+      <div class="err" id="rErr" role="alert"></div>
+      <button class="btn" id="rBtn" type="button"><svg class="i"><use href="#i-check"/></svg>Daftar</button>
+      <button class="link" id="rOld" type="button">Sudah punya akun? Masuk</button>
+    </section>
+  </div>
+</main>
+
+<!-- ===== Masuk ===== -->
+<main class="screen" id="sLog">
+  <div class="auth-wrap">
+    <section class="auth glass">
+      <h2>Masuk</h2>
+      <p class="lead">Masukkan username dan password akunmu.</p>
+      <label class="field"><svg class="i"><use href="#i-user"/></svg>
+        <input id="lUser" type="text" placeholder="Username" maxlength="24" autocomplete="username" autocapitalize="none" spellcheck="false"></label>
+      <label class="field"><svg class="i"><use href="#i-lock"/></svg>
+        <input id="lPass" type="password" placeholder="Password" maxlength="64" autocomplete="current-password">
+        <button type="button" class="eye" aria-label="Tampilkan password"><svg class="i"><use href="#i-eye"/></svg></button></label>
+      <div class="err" id="lErr" role="alert"></div>
+      <button class="btn" id="lBtn" type="button"><svg class="i"><use href="#i-lock"/></svg>Masuk</button>
+      <button class="link" id="lNew" type="button">Daftar akun baru</button>
+    </section>
+  </div>
+</main>
+
+<!-- ===== Dashboard ===== -->
+<main class="screen" id="sHome">
+  <header class="title-box glass" data-t="utama">
+    <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Buka menu" aria-haspopup="true" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+    <button class="icon-btn menu-btn mu-fab" id="muFab" type="button" aria-label="Buka halaman musik"><svg class="i"><use href="#i-music"/></svg></button>
+    <button class="icon-btn rq-fab" id="rqFab" type="button" aria-label="Request game, fitur, tools, atau laporan bug"><svg class="i"><use href="#i-bulb"/></svg></button>
+    <h1>All Tools ZyrexDep</h1>
+    <p>Semua alat dalam satu tempat</p>
+  </header>
+
+  <section class="profile glass" data-t="utama">
+    <button class="avatar" id="hAv" type="button" aria-label="Ganti avatar dari galeri"></button>
+    <span class="colon">:</span>
+    <div class="pname"><div class="nrow"><span id="hName">User</span><span id="hVb"></span></div><div class="utags" id="hTags"></div><small>Ketuk avatar untuk ganti foto</small></div>
+    <button class="icon-btn" id="out" type="button" aria-label="Keluar"><svg class="i"><use href="#i-logout"/></svg></button>
+  </section>
+
+  <section class="row" data-t="utama">
+    <div class="tile glass">
+      <div class="label"><span class="chip g"><svg class="i"><use href="#i-battery"/></svg></span>Baterai</div>
+      <div>
+        <div class="big" id="bPct">--%</div>
+        <div class="batt"><div class="shell"><div class="fill" id="bFill"></div></div></div>
+        <div class="small" id="bState">Memuat…</div>
+      </div>
+    </div>
+
+    <button class="tile glass tile-btn" id="gameBtn" type="button" aria-label="Buka Game">
+      <div class="label"><span class="chip v"><svg class="i"><use href="#i-gamepad"/></svg></span>Game</div>
+      <div>
+        <div class="gm-big"><svg class="i"><use href="#i-gamepad"/></svg><span>Main</span></div>
+        <div class="small" id="gmCount">Ketuk untuk main</div>
+      </div>
+    </button>
+
+    <div class="tile glass">
+      <div class="label"><span class="chip b"><svg class="i"><use href="#i-cloudsun"/></svg></span>Cuaca</div>
+      <div>
+        <div class="wx"><svg class="i" id="wIcon"><use href="#i-cloudsun"/></svg><span class="wx-temp" id="wTemp">--°</span></div>
+        <div class="small" id="wDesc">Memuat…</div>
+      </div>
+    </div>
+
+    <div class="tile clock glass">
+      <div class="label"><span class="chip o"><svg class="i"><use href="#i-clock"/></svg></span>Jam</div>
+      <div>
+        <div class="time"><span id="hm">--:--</span><span class="sec" id="ss">:--</span></div>
+        <div class="date" id="date">&nbsp;</div>
+      </div>
+    </div>
+  </section>
+  <section class="live-wrap" data-t="utama" id="liveBox">
+    <div class="live-top"><span class="live-dot" id="liveDot"></span><b>Info Terkini</b><small id="liveUp">Memuat…</small><button class="icon-btn live-rf" id="liveRf" type="button" aria-label="Muat ulang"><svg class="i"><use href="#i-repeat"/></svg></button></div>
+    <div class="live-warn" id="liveWarn" hidden></div>
+    <div class="live glass" id="liveCNews"><div class="live-ch"><span class="chip b"><svg class="i"><use href="#i-tv"/></svg></span><h3>Berita Terkini</h3><small id="liveNNews"></small></div><div class="live-body" id="liveBNews"><div class="live-empty">Memuat…</div></div></div>
+    <div class="live glass" id="liveCQuake"><div class="live-ch"><span class="chip o"><svg class="i"><use href="#i-pin"/></svg></span><h3>Gempa Bumi</h3><small id="liveNQuake"></small></div><div class="live-body" id="liveBQuake"><div class="live-empty">Memuat…</div></div></div>
+    <div class="live glass" id="liveCVolc"><div class="live-ch"><span class="chip p"><svg class="i"><use href="#i-bolt"/></svg></span><h3>Erupsi Gunung</h3><small id="liveNVolc"></small></div><div class="live-body" id="liveBVolc"><div class="live-empty">Memuat…</div></div></div>
+    <div class="live glass" id="liveCTsu"><div class="live-ch"><span class="chip g"><svg class="i"><use href="#i-rain"/></svg></span><h3>Tsunami</h3><small id="liveNTsu"></small></div><div class="live-body" id="liveBTsu"><div class="live-empty">Memuat…</div></div></div>
+    <p class="live-src">Sumber: BMKG &amp; portal berita nasional. Untuk keselamatan, ikuti kanal resmi BMKG &amp; PVMBG.</p>
+  </section>
+  <section data-t="profile" hidden>
+    <div class="pane glass" style="text-align:center">
+      <button class="avatar big-av" id="pAv" type="button" aria-label="Ganti avatar"></button>
+      <h3 style="margin-top:12px;font-size:24px;display:flex;align-items:center;justify-content:center;gap:7px"><span id="pName">User</span><span id="pVb" style="display:inline-flex"></span></h3>
+      <div class="utags c" id="pTags" style="margin:2px 0 8px"></div>
+      <p>Ketuk foto untuk mengganti avatar dari galeri.</p>
+    </div>
+    <div class="pane glass">
+      <h3>Ganti username</h3><p>3-24 karakter: huruf, angka, titik, strip, atau garis bawah.</p>
+      <label class="field"><svg class="i"><use href="#i-user"/></svg><input id="pUser" type="text" placeholder="Username baru" maxlength="24" autocapitalize="none" spellcheck="false"></label>
+      <div class="err" id="uErr" role="alert"></div>
+      <button class="btn" id="pSaveU" type="button">Simpan username</button>
+    </div>
+    <div class="pane glass">
+      <h3>Ganti sandi</h3><p>Setelah sandi diganti, perangkat lain otomatis keluar.</p>
+      <label class="field"><svg class="i"><use href="#i-lock"/></svg><input id="wOld" type="password" placeholder="Sandi lama" autocomplete="current-password"><button type="button" class="eye" aria-label="Tampilkan"><svg class="i"><use href="#i-eye"/></svg></button></label>
+      <label class="field"><svg class="i"><use href="#i-lock"/></svg><input id="wNew" type="password" placeholder="Sandi baru (min. 4 karakter)" autocomplete="new-password"><button type="button" class="eye" aria-label="Tampilkan"><svg class="i"><use href="#i-eye"/></svg></button></label>
+      <label class="field"><svg class="i"><use href="#i-lock"/></svg><input id="wNew2" type="password" placeholder="Ulangi sandi baru" autocomplete="new-password"></label>
+      <div class="err" id="wErr" role="alert"></div>
+      <button class="btn" id="pSavePw" type="button">Ganti sandi</button>
+    </div>
+    <div class="pane glass">
+      <h3>Sesi</h3><p>Keluar dari akun di perangkat ini. Kamu bisa masuk lagi kapan saja.</p>
+      <button class="btn sec" id="pOut" type="button"><svg class="i"><use href="#i-logout"/></svg>Keluar akun</button>
+    </div>
+    <div class="pane glass">
+      <h3 style="color:var(--red)">Hapus akun</h3><p>Akun, avatar, dan semua datanya dihapus permanen dan tidak bisa dikembalikan. Masukkan sandi untuk konfirmasi.</p>
+      <label class="field"><svg class="i"><use href="#i-lock"/></svg><input id="dPass" type="password" placeholder="Sandi kamu" autocomplete="current-password"></label>
+      <div class="err" id="dErr" role="alert"></div>
+      <button class="btn red" id="pDel" type="button">Hapus akun permanen</button>
+    </div>
+  </section>
+
+  <section data-t="dev" hidden>
+    <div class="pane glass dev">
+      <div class="dev-av" id="devAv"><img id="devImg" alt="Zyrex" src="/dev.jpg" referrerpolicy="no-referrer"></div>
+      <h3>Pembuat aplikasi ini</h3>
+      <div class="dev-name" id="devName">Zyrex</div>
+      <div class="dev-role">Developer All Tools ZyrexDep</div>
+      <p>Aplikasi ini dibuat dan dikembangkan oleh Zyrex. Ada saran, laporan bug, atau mau pesan aplikasi dan web seperti ini? Hubungi lewat kontak di bawah.</p>
+      <div class="hd">Tentang aplikasi</div>
+      <div class="dev-rows">
+        <div><span>Aplikasi</span><b>All Tools ZyrexDep</b></div>
+        <div><span>Developer</span><b id="devBrand">Zyrex (ZyrexDep)</b></div>
+        <div><span>Versi</span><b>Ve3</b></div>
+        <div><span>Dibuat dengan</span><b>dengan hati dan jantung<svg class="i" viewBox="0 0 24 24" style="vertical-align:-3px;margin-left:4px"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></b></div>
+      </div>
+      <div class="hd">Hubungi developer</div>
+      <a class="btn" id="devWa" target="_blank" rel="noopener"><svg class="i"><use href="#i-chat"/></svg><span class="bt">WhatsApp<small id="devWaTxt"></small></span></a>
+      <a class="btn sec" id="devTg" target="_blank" rel="noopener"><svg class="i"><use href="#i-send"/></svg><span class="bt">Telegram<small id="devTgTxt"></small></span></a>
+    </div>
+  </section>
+  <section data-t="tools" hidden>
+    <div id="tHome" class="pane glass">
+      <h3>Tools</h3><p id="tCount" style="margin:2px 0 6px;font-weight:700;color:var(--blue)"></p><p>Alat bantu yang bisa langsung kamu pakai di sini.</p>
+      <button class="btn sec" type="button" id="rsOpen" hidden style="margin:6px 0 0"><svg class="i"><use href="#i-tag"/></svg><span class="bt">Panel Reseller</span></button>
+      <button class="btn sec" type="button" id="mtOpen" hidden style="margin:6px 0 10px"><svg class="i"><use href="#i-shield"/></svg><span class="bt">Atur maintenance tools</span></button>
+      <div class="tool-grid">
+        <button class="tool-card" type="button" data-open="tAmp"><span class="chip o"><svg class="i"><use href="#i-crown"/></svg></span><b>AM Prem</b><small>Verifikasi akun Alight Motion dari email &amp; link masuk</small></button>
+        <button class="tool-card" type="button" data-open="tAb"><span class="chip p"><svg class="i"><use href="#i-bolt"/></svg></span><b>AM Bulk</b><small>Ambil banyak sekaligus lewat satu permintaan (kuota harian sesuai role)</small></button>
+        <button class="tool-card" type="button" data-open="tRch"><span class="chip p"><svg class="i"><use href="#i-smile"/></svg></span><b>RCH</b><small>Kirim reaksi emoji ke postingan saluran WhatsApp</small></button>
+        <button class="tool-card" type="button" data-open="tCap"><span class="chip g"><svg class="i"><use href="#i-crown"/></svg></span><b>CapCut Pro</b><small>Ambil akses CapCut Pro, kuota harian per role</small></button>
+        <button class="tool-card" type="button" data-open="tVote"><span class="chip o"><svg class="i"><use href="#i-list"/></svg></span><b>Vote Polling</b><small>Vote polling saluran WhatsApp, kuota harian per role</small></button>
+        <button class="tool-card" type="button" data-open="tSpamOtp"><span class="chip p"><svg class="i"><use href="#i-bolt"/></svg></span><b>Spam OTP</b><small>Kirim spam OTP ke nomor HP, kuota harian per role</small></button>
+        <button class="tool-card" type="button" data-open="tFol" id="folCard" hidden><span class="chip b"><svg class="i"><use href="#i-send"/></svg></span><b>Add Pengikut Saluran</b><small>Tambah pengikut ke saluran WhatsApp (khusus Owner, Developer &amp; Admin)</small></button>
+        <button class="tool-card" type="button" data-open="tSlop"><span class="chip g"><svg class="i"><use href="#i-scan"/></svg></span><b>Cek AI Slop Web</b><small>Deteksi konten asal-jadi hasil AI di sebuah halaman web</small></button>
+        <button class="tool-card" type="button" data-open="tCalc"><span class="chip b"><svg class="i"><use href="#i-calc"/></svg></span><b>Kalkulator</b><small>Hitung cepat, ada riwayat</small></button>
+        <button class="tool-card" type="button" data-open="tNotes"><span class="chip o"><svg class="i"><use href="#i-note"/></svg></span><b>Catatan</b><small>Tulis dan simpan</small></button>
+        <button class="tool-card" type="button" data-open="tIqc"><span class="chip g"><svg class="i"><use href="#i-chat"/></svg></span><b>IQC</b><small>Buat gambar chat dari teks</small></button>
+        <button class="tool-card" type="button" data-open="tIqcP"><span class="chip p"><svg class="i"><use href="#i-chat"/></svg></span><b>IQC Pink</b><small>Gambar chat versi pink</small></button>
+        <button class="tool-card" type="button" data-open="tIqcP2"><span class="chip p"><svg class="i"><use href="#i-chat"/></svg></span><b>IQC Pink V2</b><small>Pink dengan foto &amp; sinyal</small></button>
+        <button class="tool-card" type="button" data-open="tAm"><span class="chip v"><svg class="i"><use href="#i-image"/></svg></span><b>Afinitas ML</b><small>Buat kartu afinitas Mobile Legends dari foto</small></button>
+        <button class="tool-card" type="button" data-open="tCa"><span class="chip g"><svg class="i"><use href="#i-user"/></svg></span><b>Call Andro</b><small>Buat tampilan panggilan Android dari foto</small></button>
+        <button class="tool-card" type="button" data-open="tCi"><span class="chip b"><svg class="i"><use href="#i-user"/></svg></span><b>Call iOS</b><small>Buat tampilan panggilan iPhone dari foto</small></button>
+        <button class="tool-card" type="button" data-open="tDy"><span class="chip o"><svg class="i"><use href="#i-chat"/></svg></span><b>Derydnta</b><small>Buat gambar dari teks, pilih template</small></button>
+        <button class="tool-card" type="button" data-open="tFc"><span class="chip g"><svg class="i"><use href="#i-chat"/></svg></span><b>Fake Ch</b><small>Buat tampilan chat palsu dari foto</small></button>
+        <button class="tool-card" type="button" data-open="tFd"><span class="chip b"><svg class="i"><use href="#i-spark"/></svg></span><b>Fake Dana</b><small>Buat tampilan saldo Dana palsu</small></button>
+        <button class="tool-card" type="button" data-open="tFv"><span class="chip v"><svg class="i"><use href="#i-user"/></svg></span><b>Fake Dev</b><small>Buat kartu developer palsu dari foto</small></button>
+        <button class="tool-card" type="button" data-open="tFq"><span class="chip o"><svg class="i"><use href="#i-user"/></svg></span><b>Fake FF Duo</b><small>Buat kartu Free Fire duo palsu</small></button>
+        <button class="tool-card" type="button" data-open="tGc"><span class="chip g"><svg class="i"><use href="#i-chat"/></svg></span><b>Fake GC</b><small>Buat tampilan grup chat palsu dari foto</small></button>
+        <button class="tool-card" type="button" data-open="tMl"><span class="chip v"><svg class="i"><use href="#i-user"/></svg></span><b>Fake ML</b><small>Buat kartu profil Mobile Legends palsu</small></button>
+        <button class="tool-card" type="button" data-open="tMd"><span class="chip o"><svg class="i"><use href="#i-spark"/></svg></span><b>Meledak</b><small>Buat efek meledak dari foto</small></button>
+        <button class="tool-card" type="button" data-open="tMp"><span class="chip b"><svg class="i"><use href="#i-chat"/></svg></span><b>Meme Polisi</b><small>Buat meme polisi dari username &amp; teks</small></button>
+        <button class="tool-card" type="button" data-open="tNk"><span class="chip g"><svg class="i"><use href="#i-chat"/></svg></span><b>Nokia</b><small>Buat tampilan SMS Nokia jadul</small></button>
+        <button class="tool-card" type="button" data-open="tQt"><span class="chip p"><svg class="i"><use href="#i-note"/></svg></span><b>Quotes</b><small>Buat gambar kutipan dengan kata disorot</small></button>
+        <button class="tool-card" type="button" data-open="tQr"><span class="chip v"><svg class="i"><use href="#i-image"/></svg></span><b>Template QRIS</b><small>Pasang QRIS ke template, pilih 1 dari 3</small></button>
+        <button class="tool-card" type="button" data-open="tHd"><span class="chip b"><svg class="i"><use href="#i-image"/></svg></span><b>HD in Foto</b><small>Perjelas foto dari galeri</small></button>
+        <button class="tool-card" type="button" data-open="tRb"><span class="chip o"><svg class="i"><use href="#i-image"/></svg></span><b>Remove BG</b><small>Hapus latar foto</small></button>
+        <button class="tool-card" type="button" data-open="tPx"><span class="chip v"><svg class="i"><use href="#i-image"/></svg></span><b>To Pixel</b><small>Ubah foto jadi pixel art, level 1-40</small></button>
+        <button class="tool-card" type="button" data-open="tTd"><span class="chip p"><svg class="i"><use href="#i-chat"/></svg></span><b>Quote TT DM</b><small>Buat quote DM TikTok dari foto, username &amp; teks</small></button>
+        <button class="tool-card" type="button" data-open="tTq"><span class="chip g"><svg class="i"><use href="#i-chat"/></svg></span><b>TT QC</b><small>Buat bubble chat TikTok dari foto, nama &amp; teks</small></button>
+        <button class="tool-card" type="button" data-open="tWn"><span class="chip b"><svg class="i"><use href="#i-spark"/></svg></span><b>Windows</b><small>Buat gambar pesan error Windows dari teks</small></button>
+        <button class="tool-card" type="button" data-open="tAio"><span class="chip v"><svg class="i"><use href="#i-download"/></svg></span><b>AIO Downloader</b><small>Download semua media dengan tautan</small></button>
+        <button class="tool-card" type="button" data-open="tAd"><span class="chip o"><svg class="i"><use href="#i-download"/></svg></span><b>AM Download</b><small>Ambil file dari link share Alight Motion</small></button>
+        <button class="tool-card" type="button" data-open="tCp"><span class="chip g"><svg class="i"><use href="#i-lock"/></svg></span><b>Cek Phising</b><small>Cek link aman atau berbahaya</small></button>
+        <button class="tool-card" type="button" data-open="tTt"><span class="chip p"><svg class="i"><use href="#i-download"/></svg></span><b>TikTok Download</b><small>Simpan video tanpa watermark</small></button>
+        <button class="tool-card" type="button" data-open="tCc"><span class="chip b"><svg class="i"><use href="#i-download"/></svg></span><b>CapCut Download</b><small>Simpan video template CapCut dari link</small></button>
+        <button class="tool-card" type="button" data-open="tIg"><span class="chip o"><svg class="i"><use href="#i-download"/></svg></span><b>IG Download</b><small>Simpan reel, video &amp; foto Instagram</small></button>
+        <button class="tool-card" type="button" data-open="tPn"><span class="chip p"><svg class="i"><use href="#i-download"/></svg></span><b>Pin Download</b><small>Simpan video &amp; gambar Pinterest dari link</small></button>
+        <button class="tool-card" type="button" data-open="tBr"><span class="chip g"><svg class="i"><use href="#i-spark"/></svg></span><b>Brat</b><small>Buat gambar teks gaya brat dari tulisanmu</small></button>
+        <button class="tool-card" type="button" data-open="tSf"><span class="chip o"><svg class="i"><use href="#i-search"/></svg></span><b>Stalk FF</b><small>Lihat profil publik Free Fire dari UID</small></button>
+        <button class="tool-card" type="button" data-open="tSi"><span class="chip p"><svg class="i"><use href="#i-search"/></svg></span><b>Stalk IG</b><small>Lihat profil publik Instagram dari username</small></button>
+        <button class="tool-card" type="button" data-open="tSr"><span class="chip g"><svg class="i"><use href="#i-search"/></svg></span><b>Stalk Roblox</b><small>Lihat profil publik Roblox dari username</small></button>
+        <button class="tool-card" type="button" data-open="tSt"><span class="chip b"><svg class="i"><use href="#i-search"/></svg></span><b>Stalk TikTok</b><small>Lihat profil publik TikTok dari username</small></button>
+        <button class="tool-card" type="button" data-open="tBs"><span class="chip v"><svg class="i"><use href="#i-spark"/></svg></span><b>Bypass SFL</b><small>Buka link pendek sfl.gl jadi link tujuannya</small></button>
+        <button class="tool-card" type="button" data-open="tSl"><span class="chip o"><svg class="i"><use href="#i-image"/></svg></span><b>Cek AI Slop</b><small>Periksa foto dari galeri, buatan AI atau bukan</small></button>
+        <button class="tool-card" type="button" data-open="tSw"><span class="chip b"><svg class="i"><use href="#i-image"/></svg></span><b>SS Web</b><small>Screenshot halaman web dari link apa saja</small></button>
+        <button class="tool-card" type="button" data-open="tPf"><span class="chip v"><svg class="i"><use href="#i-search"/></svg></span><b>Preset Finder</b><small>Cari link preset dari komentar video</small></button>
+        <button class="tool-card" type="button" data-open="tFf"><span class="chip o"><svg class="i"><use href="#i-user"/></svg></span><b>Fake FF</b><small>Buat kartu profil Free Fire palsu</small></button>
+      </div>
+    </div>
+
+    <div id="tCalc" class="pane glass calc" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Kalkulator</h3></div>
+      <div class="c-disp"><div class="c-exp" id="cExp"></div><div class="c-res" id="cRes">0</div></div>
+      <div class="c-keys" id="cKeys"></div>
+      <div class="c-hist" id="cHist" hidden><div class="hd">Riwayat<button type="button" id="cHClr">Hapus</button></div><div id="cHList"></div></div>
+    </div>
+
+    <div id="tNotes" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Catatan</h3><span class="cnt" id="nCount"></span><button class="icon-btn" type="button" id="nNew" aria-label="Catatan baru" style="background:var(--blue);color:#fff"><svg class="i"><use href="#i-plus"/></svg></button></div>
+      <div id="nList"></div>
+    </div>
+
+    <div id="tIqc" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>IQC</h3></div>
+      <div class="hd" style="margin-top:4px">Teks</div>
+      <textarea id="iqText" class="iq-area" rows="3" maxlength="300" placeholder="Tulis teks chat…" spellcheck="false"></textarea>
+      <div class="hd">Jam</div>
+      <div class="field"><svg class="i"><use href="#i-clock"/></svg><input id="iqTime" type="text" inputmode="numeric" maxlength="5" placeholder="Tulis jam, contoh 00.19" autocomplete="off"></div>
+      <div class="hd">Foto</div>
+      <div class="seg" id="iqSeg"><button type="button" class="on" data-ph="0">Tanpa foto</button><button type="button" data-ph="1">Dengan foto</button></div>
+      <div id="iqPhoto" hidden>
+        <button class="btn sec" type="button" id="iqPick" style="margin-top:12px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+        <div class="iq-prev" id="iqPrev" hidden><img id="iqPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="iqPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+        <p class="iq-hint">Foto dikirim ke layanan IQC lewat link sementara di servermu, lalu dihapus otomatis.</p>
+      </div>
+      <input type="file" id="iqFile" accept="image/*" hidden>
+      <div class="err" id="iqErr"></div>
+      <button class="btn" type="button" id="iqGo"><svg class="i"><use href="#i-chat"/></svg>Buat gambar</button>
+      <div class="iq-out" id="iqOut" hidden>
+        <img id="iqImg" alt="Hasil IQC">
+        <a class="btn sec" id="iqSave" download="iqc.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tFf" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Fake FF</h3></div>
+      <div class="hd" style="margin-top:4px">Jenis kartu</div>
+      <div class="seg" id="ffSeg"><button type="button" class="on" data-g="cowok">Cowok</button><button type="button" data-g="cewek">Cewek</button></div>
+      <div class="hd">Nama / username</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="ffName" type="text" maxlength="40" placeholder="Tulis nama Free Fire…" autocomplete="off"></div>
+      <div class="err" id="ffErr"></div>
+      <button class="btn" type="button" id="ffGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="ffOut" hidden>
+        <img id="ffImg" alt="Hasil Fake FF">
+        <a class="btn sec" id="ffSave" download="fake-ff.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tIqcP" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>IQC Pink</h3></div>
+      <div class="hd" style="margin-top:4px">Teks</div>
+      <textarea id="ipText" class="iq-area" rows="3" maxlength="300" placeholder="Tulis teks chat…" spellcheck="false"></textarea>
+      <div class="hd">Jam</div>
+      <div class="field"><svg class="i"><use href="#i-clock"/></svg><input id="ipTime" type="text" inputmode="numeric" maxlength="5" placeholder="Tulis jam, contoh 00.19" autocomplete="off"></div>
+      <p class="iq-hint">Kosongkan jam untuk memakai jam sekarang.</p>
+      <div class="err" id="ipErr"></div>
+      <button class="btn" type="button" id="ipGo"><svg class="i"><use href="#i-chat"/></svg>Buat gambar</button>
+      <div class="iq-out" id="ipOut" hidden>
+        <img id="ipImg" alt="Hasil IQC Pink">
+        <a class="btn sec" id="ipSave" download="iqc-pink.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tIqcP2" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>IQC Pink V2</h3></div>
+      <div class="hd" style="margin-top:4px">Teks</div>
+      <textarea id="i2Text" class="iq-area" rows="3" maxlength="300" placeholder="Tulis teks chat…" spellcheck="false"></textarea>
+      <div class="hd">Jam</div>
+      <div class="field"><svg class="i"><use href="#i-clock"/></svg><input id="i2Time" type="text" inputmode="numeric" maxlength="5" placeholder="Tulis jam, contoh 00.19" autocomplete="off"></div>
+      <p class="iq-hint">Kosongkan jam untuk memakai jam sekarang.</p>
+      <div class="hd">Jaringan</div>
+      <div class="seg" id="i2Net"><button type="button" class="on" data-n="wifi">WiFi</button><button type="button" data-n="5g">5G</button><button type="button" data-n="4g">4G</button><button type="button" data-n="3g">3G</button></div>
+      <div class="hd">Foto</div>
+      <button class="btn sec" type="button" id="i2Pick" style="margin-top:12px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="i2Prev" hidden><img id="i2PrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="i2PrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis.</p>
+      <input type="file" id="i2File" accept="image/*" hidden>
+      <div class="err" id="i2Err"></div>
+      <button class="btn" type="button" id="i2Go"><svg class="i"><use href="#i-chat"/></svg>Buat gambar</button>
+      <div class="iq-out" id="i2Out" hidden>
+        <img id="i2Img" alt="Hasil IQC Pink V2">
+        <a class="btn sec" id="i2Save" download="iqc-pink-v2.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tAm" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Afinitas ML</h3></div>
+      <button class="btn sec" type="button" id="amPick" style="margin-top:4px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="amPrev" hidden><img id="amPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="amPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis. Prosesnya bisa memakan waktu agak lama.</p>
+      <input type="file" id="amFile" accept="image/*" hidden>
+      <div class="err" id="amErr"></div>
+      <button class="btn" type="button" id="amGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="amOut" hidden>
+        <img id="amImg" alt="Hasil Afinitas ML">
+        <a class="btn sec" id="amSave" download="afinitas-ml.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tCa" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Call Andro</h3></div>
+      <div class="hd" style="margin-top:4px">Nama</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="caNama" type="text" maxlength="60" placeholder="Nama kontak, contoh sayang nya acu" autocomplete="off"></div>
+      <div class="hd">Durasi</div>
+      <div class="field"><svg class="i"><use href="#i-clock"/></svg><input id="caDur" type="text" inputmode="numeric" maxlength="8" placeholder="Tulis durasi, contoh 12.27.01" autocomplete="off"></div>
+      <div class="hd">Foto</div>
+      <button class="btn sec" type="button" id="caPick" style="margin-top:12px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="caPrev" hidden><img id="caPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="caPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis.</p>
+      <input type="file" id="caFile" accept="image/*" hidden>
+      <div class="err" id="caErr"></div>
+      <button class="btn" type="button" id="caGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="caOut" hidden>
+        <img id="caImg" alt="Hasil Call Andro">
+        <a class="btn sec" id="caSave" download="call-andro.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tCi" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Call iOS</h3></div>
+      <div class="hd" style="margin-top:4px">Nama</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="ciNama" type="text" maxlength="60" placeholder="Nama kontak, contoh Tayang cu" autocomplete="off"></div>
+      <div class="hd">Durasi</div>
+      <div class="field"><svg class="i"><use href="#i-clock"/></svg><input id="ciDur" type="text" inputmode="numeric" maxlength="8" placeholder="Tulis durasi, contoh 01:01:53" autocomplete="off"></div>
+      <div class="hd">Foto</div>
+      <button class="btn sec" type="button" id="ciPick" style="margin-top:12px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="ciPrev" hidden><img id="ciPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="ciPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis.</p>
+      <input type="file" id="ciFile" accept="image/*" hidden>
+      <div class="err" id="ciErr"></div>
+      <button class="btn" type="button" id="ciGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="ciOut" hidden>
+        <img id="ciImg" alt="Hasil Call iOS">
+        <a class="btn sec" id="ciSave" download="call-ios.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tDy" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Derydnta</h3></div>
+      <div class="hd" style="margin-top:4px">Teks</div>
+      <textarea id="dyText" class="iq-area" rows="3" maxlength="300" placeholder="Tulis teksnya…" spellcheck="false"></textarea>
+      <div class="hd">Template</div>
+      <div class="seg" id="dyTpl" style="flex-wrap:wrap"></div>
+      <div class="err" id="dyErr"></div>
+      <button class="btn" type="button" id="dyGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="dyOut" hidden>
+        <img id="dyImg" alt="Hasil Derydnta">
+        <a class="btn sec" id="dySave" download="derydnta.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tFc" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Fake Ch</h3></div>
+      <div class="hd" style="margin-top:4px">Nama</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="fcNama" type="text" maxlength="60" placeholder="Nama, contoh ZyrexDepp" autocomplete="off"></div>
+      <div class="hd">Pengikut</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="fcPeng" type="text" inputmode="numeric" maxlength="12" placeholder="Jumlah pengikut, contoh 10.929" autocomplete="off"></div>
+      <div class="hd">Jam</div>
+      <div class="field"><svg class="i"><use href="#i-clock"/></svg><input id="fcJam" type="text" inputmode="numeric" maxlength="5" placeholder="Tulis jam, contoh 00.21" autocomplete="off"></div>
+      <p class="iq-hint">Kosongkan jam untuk memakai jam sekarang.</p>
+      <div class="hd">Foto</div>
+      <button class="btn sec" type="button" id="fcPick" style="margin-top:12px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="fcPrev" hidden><img id="fcPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="fcPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis.</p>
+      <input type="file" id="fcFile" accept="image/*" hidden>
+      <div class="err" id="fcErr"></div>
+      <button class="btn" type="button" id="fcGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="fcOut" hidden>
+        <img id="fcImg" alt="Hasil Fake Ch">
+        <a class="btn sec" id="fcSave" download="fake-chat.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tFd" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Fake Dana</h3></div>
+      <div class="hd" style="margin-top:4px">Nominal</div>
+      <div class="field"><svg class="i"><use href="#i-spark"/></svg><input id="fdNom" type="text" inputmode="numeric" maxlength="20" placeholder="Tulis nominal, contoh 10.382.938" autocomplete="off"></div>
+      <div class="err" id="fdErr"></div>
+      <button class="btn" type="button" id="fdGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="fdOut" hidden>
+        <img id="fdImg" alt="Hasil Fake Dana">
+        <a class="btn sec" id="fdSave" download="fake-dana.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tFv" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Fake Dev</h3></div>
+      <div class="hd" style="margin-top:4px">Nama</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="fvNama" type="text" maxlength="60" placeholder="Nama, contoh Zyrex" autocomplete="off"></div>
+      <div class="hd">Foto</div>
+      <button class="btn sec" type="button" id="fvPick" style="margin-top:12px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="fvPrev" hidden><img id="fvPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="fvPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis.</p>
+      <input type="file" id="fvFile" accept="image/*" hidden>
+      <div class="err" id="fvErr"></div>
+      <button class="btn" type="button" id="fvGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="fvOut" hidden>
+        <img id="fvImg" alt="Hasil Fake Dev">
+        <a class="btn sec" id="fvSave" download="fake-dev.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tFq" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Fake FF Duo</h3></div>
+      <div class="hd" style="margin-top:4px">Nama pemain 1</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="fqN1" type="text" maxlength="40" placeholder="Contoh Zyrex" autocomplete="off"></div>
+      <div class="hd">Nama pemain 2</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="fqN2" type="text" maxlength="40" placeholder="Contoh Dedep" autocomplete="off"></div>
+      <div class="err" id="fqErr"></div>
+      <button class="btn" type="button" id="fqGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="fqOut" hidden>
+        <img id="fqImg" alt="Hasil Fake FF Duo">
+        <a class="btn sec" id="fqSave" download="fake-ff-duo.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tGc" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Fake GC</h3></div>
+      <div class="hd" style="margin-top:4px">Nama grup</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="gcNama" type="text" maxlength="60" placeholder="Nama grup, contoh ZyrexDep Ofc" autocomplete="off"></div>
+      <div class="hd">Jumlah anggota</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="gcAng" type="text" inputmode="numeric" maxlength="12" placeholder="Contoh 1.938" autocomplete="off"></div>
+      <div class="hd">Foto</div>
+      <button class="btn sec" type="button" id="gcPick" style="margin-top:12px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="gcPrev" hidden><img id="gcPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="gcPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis.</p>
+      <input type="file" id="gcFile" accept="image/*" hidden>
+      <div class="err" id="gcErr"></div>
+      <button class="btn" type="button" id="gcGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="gcOut" hidden>
+        <img id="gcImg" alt="Hasil Fake GC">
+        <a class="btn sec" id="gcSave" download="fake-gc.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tMl" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Fake ML</h3></div>
+      <div class="hd" style="margin-top:4px">Username</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="mlUser" type="text" maxlength="40" placeholder="Username, contoh Zyrex" autocomplete="off"></div>
+      <div class="hd">Rank</div>
+      <div class="field"><svg class="i"><use href="#i-spark"/></svg><input id="mlRank" type="text" maxlength="20" placeholder="Kode rank, contoh imo" autocomplete="off" autocapitalize="none"></div>
+      <div class="hd">Border</div>
+      <div class="seg" id="mlBorder" style="flex-wrap:wrap"></div>
+      <div class="hd">Foto</div>
+      <button class="btn sec" type="button" id="mlPick" style="margin-top:12px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="mlPrev" hidden><img id="mlPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="mlPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis.</p>
+      <input type="file" id="mlFile" accept="image/*" hidden>
+      <div class="err" id="mlErr"></div>
+      <button class="btn" type="button" id="mlGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="mlOut" hidden>
+        <img id="mlImg" alt="Hasil Fake ML">
+        <a class="btn sec" id="mlSave" download="fake-ml.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tPx" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>To Pixel</h3></div>
+      <button class="btn sec" type="button" id="pxPick" style="margin-top:4px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="pxPrev" hidden><img id="pxPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="pxPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <input type="file" id="pxFile" accept="image/*" hidden>
+      <div class="px-lv"><label for="pxLv">Level pixel</label><output id="pxLvV">30</output></div>
+      <input type="range" id="pxLv" class="px-range" min="1" max="40" step="1" value="30">
+      <div class="px-ends"><span>1</span><span>40</span></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis. Level kecil = pixel halus, level besar = pixel kasar/besar (sesuai layanan).</p>
+      <div class="err" id="pxErr"></div>
+      <button class="btn" type="button" id="pxGo"><svg class="i"><use href="#i-spark"/></svg>Jadikan pixel</button>
+      <div class="iq-out" id="pxOut" hidden>
+        <img id="pxImg" alt="Hasil To Pixel" style="image-rendering:pixelated">
+        <a class="btn sec" id="pxSave" download="topixel.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+    <div id="tTd" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Quote TT DM</h3></div>
+      <div class="hd" style="margin-top:4px">Username</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="tdUser" type="text" maxlength="40" placeholder="Contoh Zyrex" autocomplete="off"></div>
+      <div class="hd">Teks</div>
+      <textarea id="tdText" class="iq-area" rows="3" maxlength="200" placeholder="Tulis teks quote, contoh sini aku peyuk" style="margin-top:12px"></textarea>
+      <div class="hd">Foto</div>
+      <button class="btn sec" type="button" id="tdPick" style="margin-top:12px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="tdPrev" hidden><img id="tdPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="tdPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis.</p>
+      <input type="file" id="tdFile" accept="image/*" hidden>
+      <div class="err" id="tdErr"></div>
+      <button class="btn" type="button" id="tdGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="tdOut" hidden>
+        <img id="tdImg" alt="Hasil Quote TT DM">
+        <a class="btn sec" id="tdSave" download="quote-ttdm.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+    <div id="tTq" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>TT QC</h3></div>
+      <div class="hd" style="margin-top:4px">Nama</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="tqName" type="text" maxlength="40" placeholder="Contoh Zyrex" autocomplete="off"></div>
+      <div class="hd">Teks</div>
+      <textarea id="tqText" class="iq-area" rows="3" maxlength="200" placeholder="Tulis teks chat, contoh Iya halo" style="margin-top:12px"></textarea>
+      <div class="hd">Foto</div>
+      <button class="btn sec" type="button" id="tqPick" style="margin-top:12px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="tqPrev" hidden><img id="tqPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="tqPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis.</p>
+      <input type="file" id="tqFile" accept="image/*" hidden>
+      <div class="err" id="tqErr"></div>
+      <button class="btn" type="button" id="tqGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="tqOut" hidden>
+        <img id="tqImg" alt="Hasil TT QC">
+        <a class="btn sec" id="tqSave" download="tt-qc.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+    <div id="tWn" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Windows</h3></div>
+      <div class="hd" style="margin-top:4px">Teks</div>
+      <textarea id="wnText" class="iq-area" rows="3" maxlength="200" placeholder="Tulis teks, contoh Just Prend Kok Manggil Sayang" style="margin-top:12px"></textarea>
+      <div class="err" id="wnErr"></div>
+      <button class="btn" type="button" id="wnGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="wnOut" hidden>
+        <img id="wnImg" alt="Hasil Windows">
+        <a class="btn sec" id="wnSave" download="windows.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+    <div id="tAio" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>AIO Downloader</h3></div>
+      <p class="iq-hint" style="margin-top:0"><b>Download semua media dengan tautan.</b> Tempel satu link postingan atau video dari platform yang didukung layanan (contoh TikTok), lalu semua media yang ditemukan (video, audio, foto) tampil sebagai daftar unduhan. Tekan tombolnya untuk menyimpan tiap media, atau pakai <i>Salin semua tautan</i> untuk mengambil semua link sekaligus.</p>
+      <label class="field"><svg class="i"><use href="#i-download"/></svg><input id="aoUrl" type="url" inputmode="url" placeholder="https://vt.tiktok.com/…" maxlength="500" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <div class="err" id="aoErr"></div>
+      <button class="btn" type="button" id="aoGo"><svg class="i"><use href="#i-download"/></svg>Ambil semua media</button>
+      <div class="tt-res" id="aoRes" hidden>
+        <video id="aoPlay" class="tt-video" controls playsinline preload="metadata" hidden></video>
+        <div class="tt-head"><img id="aoCover" alt="" referrerpolicy="no-referrer" hidden><div class="tt-meta"><b id="aoTitle"></b><small id="aoAuthor"></small><small id="aoInfo"></small></div></div>
+        <div class="tt-btns" id="aoBtns"></div>
+        <button class="btn sec" type="button" id="aoCopy" style="margin-top:10px"><svg class="i"><use href="#i-copy"/></svg>Salin semua tautan</button>
+      </div>
+    </div>
+    <div id="tAd" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>AM Download</h3></div>
+      <p class="iq-hint" style="margin-top:0"><b>Download file Alight Motion dengan tautan.</b> Tempel link share Alight Motion (alightcreative.com/am/share/…), lalu semua file dan media yang diberikan layanan tampil sebagai daftar unduhan. Tekan tombolnya untuk menyimpan tiap file, atau pakai <i>Salin semua tautan</i> untuk mengambil semua link sekaligus.</p>
+      <label class="field"><svg class="i"><use href="#i-download"/></svg><input id="adUrl" type="url" inputmode="url" placeholder="https://alightcreative.com/am/share/…" maxlength="500" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <div class="err" id="adErr"></div>
+      <button class="btn" type="button" id="adGo"><svg class="i"><use href="#i-download"/></svg>Ambil file</button>
+      <div class="tt-res" id="adRes" hidden>
+        <video id="adPlay" class="tt-video" controls playsinline preload="metadata" hidden></video>
+        <div class="tt-head"><img id="adCover" alt="" referrerpolicy="no-referrer" hidden><div class="tt-meta"><b id="adTitle"></b><small id="adAuthor"></small><small id="adInfo"></small></div></div>
+        <div class="tt-btns" id="adBtns"></div>
+        <button class="btn sec" type="button" id="adCopy" style="margin-top:10px"><svg class="i"><use href="#i-copy"/></svg>Salin semua tautan</button>
+      </div>
+    </div>
+    <div id="tMd" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Meledak</h3></div>
+      <button class="btn sec" type="button" id="mdPick" style="margin-top:4px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="mdPrev" hidden><img id="mdPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="mdPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis. Prosesnya bisa agak lama.</p>
+      <input type="file" id="mdFile" accept="image/*" hidden>
+      <div class="err" id="mdErr"></div>
+      <button class="btn" type="button" id="mdGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="mdOut" hidden>
+        <img id="mdImg" alt="Hasil Meledak">
+        <a class="btn sec" id="mdSave" download="meledak.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tMp" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Meme Polisi</h3></div>
+      <div class="hd" style="margin-top:4px">Username</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="mpUser" type="text" maxlength="40" placeholder="Username, contoh Zyrex" autocomplete="off"></div>
+      <div class="hd">Teks</div>
+      <textarea id="mpText" class="iq-area" rows="3" maxlength="300" placeholder="Tulis teksnya…" spellcheck="false"></textarea>
+      <div class="err" id="mpErr"></div>
+      <button class="btn" type="button" id="mpGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="mpOut" hidden>
+        <img id="mpImg" alt="Hasil Meme Polisi">
+        <a class="btn sec" id="mpSave" download="meme-polisi.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tNk" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Nokia</h3></div>
+      <div class="hd" style="margin-top:4px">Pesan</div>
+      <textarea id="nkMsg" class="iq-area" rows="3" maxlength="300" placeholder="Tulis isi pesan…" spellcheck="false"></textarea>
+      <div class="hd">Pengirim</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="nkSender" type="text" maxlength="40" placeholder="Nama pengirim, contoh Zyrex" autocomplete="off"></div>
+      <div class="hd">Tanggal</div>
+      <div class="field"><svg class="i"><use href="#i-clock"/></svg><input id="nkDate" type="text" inputmode="numeric" maxlength="10" placeholder="Bulan/tanggal/tahun, contoh 08/21/26" autocomplete="off"></div>
+      <div class="hd">Jam</div>
+      <div class="field"><svg class="i"><use href="#i-clock"/></svg><input id="nkTime" type="text" inputmode="numeric" maxlength="5" placeholder="Tulis jam, contoh 00.00" autocomplete="off"></div>
+      <p class="iq-hint">Kosongkan tanggal dan jam untuk memakai waktu sekarang.</p>
+      <div class="err" id="nkErr"></div>
+      <button class="btn" type="button" id="nkGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="nkOut" hidden>
+        <img id="nkImg" alt="Hasil Nokia">
+        <a class="btn sec" id="nkSave" download="nokia.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tQt" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Quotes</h3></div>
+      <div class="hd" style="margin-top:4px">Teks</div>
+      <textarea id="qtText" class="iq-area" rows="3" maxlength="300" placeholder="Contoh: iya [zyrex] gacor" spellcheck="false"></textarea>
+      <p class="iq-hint">Kata yang mau disorot ditulis di dalam kurung siku. Contoh: <b>iya [zyrex] gacor</b> menyorot kata "zyrex".</p>
+      <div class="hd">Nama</div>
+      <div class="field"><svg class="i"><use href="#i-user"/></svg><input id="qtName" type="text" maxlength="40" placeholder="Nama, contoh ZyrexDep" autocomplete="off"></div>
+      <div class="err" id="qtErr"></div>
+      <button class="btn" type="button" id="qtGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="qtOut" hidden>
+        <img id="qtImg" alt="Hasil Quotes">
+        <a class="btn sec" id="qtSave" download="quotes.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tQr" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Template QRIS</h3></div>
+      <div class="hd" style="margin-top:4px">Template</div>
+      <div class="seg" id="qrTpl"><button type="button" class="on" data-n="1">1</button><button type="button" data-n="2">2</button><button type="button" data-n="3">3</button></div>
+      <div class="hd">Foto QRIS</div>
+      <button class="btn sec" type="button" id="qrPick" style="margin-top:12px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="qrPrev" hidden><img id="qrPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="qrPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis.</p>
+      <input type="file" id="qrFile" accept="image/*" hidden>
+      <div class="err" id="qrErr"></div>
+      <button class="btn" type="button" id="qrGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="qrOut" hidden>
+        <img id="qrImg" alt="Hasil Template QRIS">
+        <a class="btn sec" id="qrSave" download="template-qris.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tHd" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>HD in Foto</h3></div>
+      <button class="btn sec" type="button" id="hdPick" style="margin-top:4px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="hdPrev" hidden><img id="hdPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="hdPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis. Prosesnya bisa memakan waktu sampai 1-2 menit.</p>
+      <input type="file" id="hdFile" accept="image/*" hidden>
+      <div class="err" id="hdErr"></div>
+      <button class="btn" type="button" id="hdGo"><svg class="i"><use href="#i-image"/></svg>HD kan foto</button>
+      <div class="iq-out" id="hdOut" hidden>
+        <img id="hdImg" alt="Hasil HD">
+        <a class="btn sec" id="hdSave" download="hd.jpg"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tRb" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Remove BG</h3></div>
+      <button class="btn sec" type="button" id="rbPick" style="margin-top:4px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="rbPrev" hidden><img id="rbPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="rbPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis.</p>
+      <input type="file" id="rbFile" accept="image/*" hidden>
+      <div class="err" id="rbErr"></div>
+      <button class="btn" type="button" id="rbGo"><svg class="i"><use href="#i-image"/></svg>Hapus latar</button>
+      <div class="iq-out" id="rbOut" hidden>
+        <img id="rbImg" alt="Hasil Remove BG" style="background:repeating-conic-gradient(#8884 0 25%,#fff4 0 50%) 50%/20px 20px">
+        <a class="btn sec" id="rbSave" download="removebg.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+
+    <div id="tSlop" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Cek AI Slop Web</h3></div>
+      <label class="field"><svg class="i"><use href="#i-link"/></svg><input id="slopUrl" type="text" inputmode="url" placeholder="https://contoh.com (link apa saja)" maxlength="500" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Tempel link halaman web apa saja untuk dicek seberapa besar kemungkinan isinya konten asal-jadi buatan AI ("AI slop").</p>
+      <div class="err" id="slopErr"></div>
+      <button class="btn" type="button" id="slopGo"><svg class="i"><use href="#i-scan"/></svg>Pindai link</button>
+      <div class="cp-res ok" id="slopRes" hidden>
+        <div class="cp-top"><b id="slopHead">Hasil pemindaian</b><small id="slopUrlT"></small></div>
+        <div class="cp-list" id="slopList"></div>
+      </div>
+    </div>
+
+    <div id="tAmp" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>AM Prem</h3></div>
+      <div class="rch-q" id="ampQuota"><span id="ampQt">Memuat kuota…</span><small id="ampQs"></small></div>
+      <div class="amp-st"><i>1</i><b>Kirim link ke Gmail</b></div>
+      <label class="field"><svg class="i"><use href="#i-user"/></svg><input id="ampEmail" type="email" inputmode="email" placeholder="Gmail akun Alight Motion" maxlength="120" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <div class="err" id="ampErr1"></div>
+      <button class="btn" type="button" id="ampSend"><svg class="i"><use href="#i-send"/></svg>Kirim link verifikasi</button>
+      <div class="amp-sent" id="ampSent" hidden>
+        <span id="ampSentTxt"></span>
+        <button class="btn ghost" type="button" id="ampGmail">Buka Gmail</button>
+      </div>
+      <div class="amp-st" style="margin-top:22px"><i>2</i><b>Tempel link dari Gmail</b></div>
+      <textarea id="ampLink" class="iq-area" rows="4" maxlength="2000" placeholder="Salin link masuk dari email Alight Motion di Gmail, tempel di sini (https://alight-creative.firebaseapp.com/…)" spellcheck="false" autocapitalize="none"></textarea>
+      <p class="iq-hint">Link itu berisi kode sekali pakai untuk akunmu dan hanya diteruskan ke layanan verifikasi, tidak disimpan di sini. Kuota hanya terpakai kalau verifikasi berhasil.</p>
+      <div class="err" id="ampErr"></div>
+      <button class="btn" type="button" id="ampGo"><svg class="i"><use href="#i-crown"/></svg>Verifikasi</button>
+      <div class="cp-res ok" id="ampRes" hidden>
+        <div class="cp-top"><b>Verifikasi berhasil</b><small id="ampOk"></small></div>
+        <div class="cp-list" id="ampList"></div>
+      </div>
+    </div>
+
+    <div id="tAb" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>AM Bulk</h3></div>
+      <div class="rch-q" id="abQuota"><span id="abQt">Memuat kuota…</span><small id="abQs"></small></div>
+      <label class="field"><svg class="i"><use href="#i-bolt"/></svg><input id="abAmt" type="number" inputmode="numeric" min="1" max="50" value="10" placeholder="Jumlah"></label>
+      <p class="iq-hint" id="abHint">Jumlah per jalan (maks 50). Satu kali jalan memakai 1 kuota.</p>
+      <div class="err" id="abErr"></div>
+      <button class="btn" type="button" id="abGo"><svg class="i"><use href="#i-bolt"/></svg>Jalankan</button>
+      <div class="cp-res ok" id="abRes" hidden>
+        <div class="cp-top"><b>Selesai</b><small id="abOk"></small></div>
+        <button class="btn ghost" type="button" id="abCopy" hidden>Salin semua</button>
+        <div class="cp-list" id="abList"></div>
+      </div>
+    </div>
+
+    <div id="tCap" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>CapCut Pro</h3></div>
+      <div class="rch-q" id="capQuota"><span id="capQt">Memuat kuota…</span><small id="capQs"></small></div>
+      <p class="iq-hint">Kuota per hari: Pengguna 1x, VIP 10x, Owner 25x, Developer tanpa batas. Simpan email &amp; password-nya, jangan dibagikan. Kuota hanya terpakai kalau berhasil, reset 00.00 WIB.</p>
+      <div class="err" id="capErr"></div>
+      <button class="btn" type="button" id="capGo"><svg class="i"><use href="#i-crown"/></svg>Ambil CapCut Pro</button>
+      <div class="cp-res ok" id="capRes" hidden>
+        <div class="cp-top"><b>Berhasil</b><small id="capNote"></small></div>
+        <div id="capList"></div>
+              </div>
+    </div>
+
+    <div id="tVote" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Vote Polling</h3></div>
+      <div class="rch-q" id="voteQuota"><span id="voteQt">Memuat kuota…</span><small id="voteQs"></small></div>
+      <label class="field"><svg class="i"><use href="#i-chat"/></svg><input id="voteLink" type="url" inputmode="url" placeholder="https://whatsapp.com/channel/…/123" maxlength="300" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Tempel link postingan polling saluran WhatsApp (yang ada angka di ujungnya).</p>
+      <label class="field" style="margin-top:12px"><svg class="i"><use href="#i-list"/></svg><input id="voteOpt" type="number" inputmode="numeric" min="1" max="20" placeholder="Nomor pilihan (1, 2, 3…)" value="1"></label>
+      <p class="iq-hint">Pilihan urut dari atas: 1 = pilihan pertama. Kuota per hari: Pengguna 3x, VIP 15x, Owner 67x, Admin &amp; Developer tanpa batas. Terpakai hanya kalau berhasil.</p>
+      <div class="err" id="voteErr"></div>
+      <button class="btn" type="button" id="voteGo"><svg class="i"><use href="#i-send"/></svg>Kirim vote</button>
+      <div class="cp-res ok" id="voteRes" hidden>
+        <div class="cp-top"><b>Vote terkirim</b><small id="voteNote"></small></div>
+        <div id="voteList"></div>
+      </div>
+    </div>
+
+    <div id="tSpamOtp" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Spam OTP</h3></div>
+      <div class="rch-q" id="spamOtpQuota"><span id="spamOtpQt">Memuat kuota…</span><small id="spamOtpQs"></small></div>
+      <label class="field"><svg class="i"><use href="#i-user"/></svg><input id="spamOtpNomor" type="tel" inputmode="tel" placeholder="08xxxxxxxxxx atau 62xxxxxxxxxx" maxlength="16" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Nomor tujuan (Indonesia). Format 08… atau 62…</p>
+      <label class="field" style="margin-top:12px"><svg class="i"><use href="#i-bolt"/></svg><input id="spamOtpJumlah" type="number" inputmode="numeric" min="1" max="100" placeholder="Jumlah spam (1–100)" value="10"></label>
+      <p class="iq-hint">Kuota per hari: VIP 5x, Owner 10x, Partner 25x, TK / Developer / Admin tanpa batas. Pengguna biasa tidak bisa memakai. Kuota hanya terpakai kalau berhasil, reset 00.00 WIB.</p>
+      <div class="err" id="spamOtpErr"></div>
+      <button class="btn" type="button" id="spamOtpGo"><svg class="i"><use href="#i-send"/></svg>Kirim Spam OTP</button>
+      <div class="cp-res ok" id="spamOtpRes" hidden>
+        <div class="cp-top"><b>Spam OTP dikirim</b><small id="spamOtpNote"></small></div>
+        <div id="spamOtpList"></div>
+      </div>
+    </div>
+
+    <div id="tFol" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Add Pengikut Saluran</h3></div>
+      <div class="rch-q inf" id="folQuota"><span>Khusus Owner, Developer &amp; Admin</span><small>Tanpa batas</small></div>
+      <label class="field"><svg class="i"><use href="#i-chat"/></svg><input id="folLink" type="url" inputmode="url" placeholder="https://whatsapp.com/channel/…" maxlength="300" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Tempel link saluran WhatsApp (bukan link postingan).</p>
+      <div class="err" id="folErr"></div>
+      <button class="btn" type="button" id="folGo"><svg class="i"><use href="#i-send"/></svg>Tambah pengikut</button>
+      <div class="cp-res ok" id="folRes" hidden>
+        <div class="cp-top"><b>Berhasil dikirim</b><small id="folNote"></small></div>
+        <div id="folList"></div>
+      </div>
+    </div>
+
+    <div id="tRch" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>RCH</h3></div>
+      <div class="rch-q" id="rchQuota"><span id="rchQt">Memuat kuota…</span><small id="rchQs"></small></div>
+      <label class="field"><svg class="i"><use href="#i-chat"/></svg><input id="rchLink" type="url" inputmode="url" placeholder="https://whatsapp.com/channel/…/123" maxlength="300" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Tempel link postingan saluran WhatsApp (yang ada angka di ujungnya).</p>
+      <label class="field" style="margin-top:12px"><svg class="i"><use href="#i-smile"/></svg><input id="rchEmo" type="text" placeholder="Emoji, pisahkan dengan koma" maxlength="400" autocomplete="off" spellcheck="false" value="&#128511;, &#128557;, &#129293;"></label>
+      <div class="rch-chips" id="rchChips"></div>
+      <p class="iq-hint">Maksimal 30 emoji. Kuota hanya terpakai kalau reaksi berhasil terkirim.</p>
+      <div class="err" id="rchErr"></div>
+      <button class="btn" type="button" id="rchGo"><svg class="i"><use href="#i-send"/></svg>Kirim reaksi</button>
+      <div class="cp-res ok" id="rchRes" hidden>
+        <div class="cp-top"><b>Reaksi terkirim</b><small id="rchOk"></small></div>
+      </div>
+    </div>
+
+    <div id="tCp" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Cek Phising</h3></div>
+      <label class="field"><svg class="i"><use href="#i-lock"/></svg><input id="cpUrl" type="url" inputmode="url" placeholder="https://contoh.com" maxlength="500" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Tempel link website, lalu cek apakah terindikasi phishing atau malware.</p>
+      <div class="err" id="cpErr"></div>
+      <button class="btn" type="button" id="cpGo"><svg class="i"><use href="#i-lock"/></svg>Cek link</button>
+      <div class="cp-res" id="cpRes" hidden>
+        <div class="cp-top"><b id="cpVer"></b><small id="cpDesc"></small></div>
+        <div class="cp-url" id="cpLink"></div>
+        <div class="cp-list" id="cpList"></div>
+        <div class="cp-time" id="cpTime"></div>
+      </div>
+    </div>
+
+    <div id="tTt" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>TikTok Download</h3></div>
+      <label class="field"><svg class="i"><use href="#i-download"/></svg><input id="ttUrl" type="url" inputmode="url" placeholder="https://vt.tiktok.com/…" maxlength="500" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Tempel link video TikTok, lalu pilih hasil yang mau disimpan.</p>
+      <div class="err" id="ttErr"></div>
+      <button class="btn" type="button" id="ttGo"><svg class="i"><use href="#i-download"/></svg>Ambil video</button>
+      <div class="tt-res" id="ttRes" hidden>
+        <video id="ttPlay" class="tt-video" controls playsinline preload="metadata" hidden></video>
+        <div class="tt-head"><img id="ttCover" alt="" referrerpolicy="no-referrer"><div class="tt-meta"><b id="ttTitle"></b><small id="ttAuthor"></small><small id="ttInfo"></small></div></div>
+        <div class="tt-btns" id="ttBtns"></div>
+      </div>
+    </div>
+
+    <div id="tCc" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>CapCut Download</h3></div>
+      <label class="field"><svg class="i"><use href="#i-download"/></svg><input id="ccUrl" type="url" inputmode="url" placeholder="https://www.capcut.com/tv2/…" maxlength="500" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Tempel link template atau video CapCut, lalu pilih hasil yang mau disimpan.</p>
+      <div class="err" id="ccErr"></div>
+      <button class="btn" type="button" id="ccGo"><svg class="i"><use href="#i-download"/></svg>Ambil video</button>
+      <div class="tt-res" id="ccRes" hidden>
+        <video id="ccPlay" class="tt-video" controls playsinline preload="metadata" hidden></video>
+        <div class="tt-head"><img id="ccCover" alt="" referrerpolicy="no-referrer"><div class="tt-meta"><b id="ccTitle"></b><small id="ccAuthor"></small></div></div>
+        <div class="tt-btns" id="ccBtns"></div>
+      </div>
+    </div>
+
+    <div id="tIg" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>IG Download</h3></div>
+      <label class="field"><svg class="i"><use href="#i-download"/></svg><input id="igUrl" type="url" inputmode="url" placeholder="https://www.instagram.com/reel/…" maxlength="500" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Tempel link reel, video, atau foto Instagram (akun harus publik), lalu pilih hasil yang mau disimpan.</p>
+      <div class="err" id="igErr"></div>
+      <button class="btn" type="button" id="igGo"><svg class="i"><use href="#i-download"/></svg>Ambil media</button>
+      <div class="tt-res" id="igRes" hidden>
+        <video id="igPlay" class="tt-video" controls playsinline preload="metadata" hidden></video>
+        <img id="igPic" class="tt-video" alt="" referrerpolicy="no-referrer" hidden>
+        <div class="tt-btns" id="igBtns"></div>
+      </div>
+    </div>
+
+    <div id="tPn" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Pin Download</h3></div>
+      <label class="field"><svg class="i"><use href="#i-download"/></svg><input id="pnUrl" type="url" inputmode="url" placeholder="https://pin.it/…" maxlength="500" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Tempel link pin Pinterest (pin.it atau pinterest.com), lalu pilih hasil yang mau disimpan.</p>
+      <div class="err" id="pnErr"></div>
+      <button class="btn" type="button" id="pnGo"><svg class="i"><use href="#i-download"/></svg>Ambil pin</button>
+      <div class="tt-res" id="pnRes" hidden>
+        <video id="pnPlay" class="tt-video" controls playsinline preload="metadata" hidden></video>
+        <img id="pnPic" class="tt-video" alt="" referrerpolicy="no-referrer" hidden>
+        <div class="tt-head"><div class="tt-meta"><b id="pnTitle"></b><small id="pnAuthor"></small></div></div>
+        <div class="tt-btns" id="pnBtns"></div>
+      </div>
+    </div>
+
+    <div id="tBr" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Brat</h3></div>
+      <div class="hd" style="margin-top:4px">Teks</div>
+      <textarea id="brText" class="iq-area" rows="3" maxlength="200" placeholder="Tulis teks, contoh Zyrex" style="margin-top:12px"></textarea>
+      <div class="err" id="brErr"></div>
+      <button class="btn" type="button" id="brGo"><svg class="i"><use href="#i-spark"/></svg>Buat gambar</button>
+      <div class="iq-out" id="brOut" hidden>
+        <img id="brImg" alt="Hasil Brat">
+        <a class="btn sec" id="brSave" download="brat.png"><svg class="i"><use href="#i-image"/></svg>Simpan gambar</a>
+      </div>
+    </div>
+    <div id="tSf" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Stalk FF</h3></div>
+      <label class="field"><svg class="i"><use href="#i-search"/></svg><input id="sfUid" type="text" inputmode="numeric" placeholder="UID Free Fire, contoh 12345678" maxlength="14" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Masukkan UID untuk melihat profil publik pemain: level, rank, guild, karakter, dan item yang dipakai.</p>
+      <div class="err" id="sfErr"></div>
+      <button class="btn" type="button" id="sfGo"><svg class="i"><use href="#i-search"/></svg>Cari profil</button>
+      <div class="tt-res" id="sfRes" hidden>
+        <div class="tt-head"><img id="sfAva" alt="" referrerpolicy="no-referrer" style="width:72px;height:72px"><div class="tt-meta"><b id="sfName"></b><small id="sfSub"></small><small id="sfSig"></small></div></div>
+        <div class="sf-grid" id="sfStats"></div>
+        <div class="sf-sec" id="sfExtra"></div>
+        <div class="sf-gear" id="sfGear"></div>
+      </div>
+    </div>
+
+    <div id="tSi" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Stalk IG</h3></div>
+      <label class="field"><svg class="i"><use href="#i-search"/></svg><input id="siUser" type="text" placeholder="Username Instagram, contoh izyrex" maxlength="31" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Masukkan username untuk melihat profil publik: foto, bio, jumlah pengikut, dan postingan terbaru. Akun privat hanya tampil info dasarnya.</p>
+      <div class="err" id="siErr"></div>
+      <button class="btn" type="button" id="siGo"><svg class="i"><use href="#i-search"/></svg>Cari profil</button>
+      <div class="tt-res" id="siRes" hidden>
+        <div class="tt-head"><img id="siAva" alt="" referrerpolicy="no-referrer" style="width:72px;height:72px;border-radius:50%"><div class="tt-meta"><b id="siName"></b><small id="siSub"></small><small id="siBio" style="white-space:pre-line"></small></div></div>
+        <div class="sf-grid" id="siStats"></div>
+        <div id="siSecs"></div>
+      </div>
+    </div>
+
+    <div id="tSr" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Stalk Roblox</h3></div>
+      <label class="field"><svg class="i"><use href="#i-search"/></svg><input id="srUser" type="text" placeholder="Username Roblox, contoh inisayasiuu" maxlength="21" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Masukkan username untuk melihat profil publik: avatar, deskripsi, tanggal akun dibuat, jumlah teman, dan pengikut.</p>
+      <div class="err" id="srErr"></div>
+      <button class="btn" type="button" id="srGo"><svg class="i"><use href="#i-search"/></svg>Cari profil</button>
+      <div class="tt-res" id="srRes" hidden>
+        <div class="tt-head"><img id="srAva" alt="" referrerpolicy="no-referrer" style="width:72px;height:72px"><div class="tt-meta"><b id="srName"></b><small id="srSub"></small><small id="srDesc" style="white-space:pre-line"></small></div></div>
+        <div class="sf-grid" id="srStats"></div>
+        <div id="srSecs"></div>
+      </div>
+    </div>
+
+    <div id="tSt" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Stalk TikTok</h3></div>
+      <label class="field"><svg class="i"><use href="#i-search"/></svg><input id="stUser" type="text" placeholder="Username TikTok, contoh inizyrexprst" maxlength="25" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Masukkan username untuk melihat profil publik: foto, bio, jumlah pengikut, mengikuti, postingan, dan total suka.</p>
+      <div class="err" id="stErr"></div>
+      <button class="btn" type="button" id="stGo"><svg class="i"><use href="#i-search"/></svg>Cari profil</button>
+      <div class="tt-res" id="stRes" hidden>
+        <div class="tt-head"><img id="stAva" alt="" referrerpolicy="no-referrer" style="width:72px;height:72px;border-radius:50%"><div class="tt-meta"><b id="stName"></b><small id="stSub"></small><small id="stBio" style="white-space:pre-line"></small></div></div>
+        <div class="sf-grid" id="stStats"></div>
+      </div>
+    </div>
+
+    <div id="tBs" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Bypass SFL</h3></div>
+      <label class="field"><svg class="i"><use href="#i-download"/></svg><input id="bsUrl" type="url" inputmode="url" placeholder="https://sfl.gl/…" maxlength="500" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Tempel link pendek sfl.gl, lalu ambil link tujuannya. Hati-hati sebelum membuka link hasilnya, cek dulu aman atau tidak (bisa pakai tool Cek Phising).</p>
+      <div class="err" id="bsErr"></div>
+      <button class="btn" type="button" id="bsGo"><svg class="i"><use href="#i-spark"/></svg>Bypass link</button>
+      <div class="tt-res" id="bsRes" hidden>
+        <div class="sf-sec">
+          <div><small>Link tujuan</small><span id="bsDest"></span></div>
+          <div><small>Waktu proses</small><span id="bsTime"></span></div>
+        </div>
+        <div class="tt-btns">
+          <a class="btn" id="bsOpen" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-download"/></svg>Buka link tujuan</a>
+          <button class="btn sec" type="button" id="bsCopy"><svg class="i"><use href="#i-note"/></svg>Salin link</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tSl" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Cek AI Slop</h3></div>
+      <button class="btn sec" type="button" id="slPick" style="margin-top:4px"><svg class="i"><use href="#i-image"/></svg>Pilih dari galeri</button>
+      <div class="iq-prev" id="slPrev" hidden><img id="slPrevImg" alt="Foto dipilih"><button class="icon-btn" type="button" id="slPrevX" aria-label="Hapus foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+      <p class="iq-hint">Foto dikirim ke layanan lewat link sementara di servermu, lalu dihapus otomatis. Hasil berupa perkiraan, jadi jangan dijadikan bukti pasti.</p>
+      <input type="file" id="slFile" accept="image/*" hidden>
+      <div class="err" id="slErr"></div>
+      <button class="btn" type="button" id="slGo"><svg class="i"><use href="#i-search"/></svg>Periksa foto</button>
+      <div class="tt-res" id="slRes" hidden>
+        <div class="sl-score" id="slScoreBox" hidden><small id="slScoreLbl"></small><b id="slScoreVal"></b><div class="sl-bar"><div id="slBarFill"></div></div></div>
+        <div class="sf-sec" id="slVerdictBox" hidden><div><small>Kesimpulan</small><span id="slVerdict"></span></div></div>
+        <div class="sf-grid" id="slRows"></div>
+      </div>
+    </div>
+
+    <div id="tSw" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>SS Web</h3></div>
+      <label class="field"><svg class="i"><use href="#i-search"/></svg><input id="swUrl" type="url" inputmode="url" placeholder="https://contoh.com" maxlength="1000" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Tempel link web apa saja (tanpa https:// juga bisa), lalu ambil screenshot tampilan Desktop, Tablet, dan Mobile. Prosesnya bisa memakan waktu sampai 1 menit.</p>
+      <div class="err" id="swErr"></div>
+      <button class="btn" type="button" id="swGo"><svg class="i"><use href="#i-image"/></svg>Ambil screenshot</button>
+      <div class="tt-res" id="swRes" hidden><div id="swItems"></div></div>
+    </div>
+
+    <div id="tPf" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tHome" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Preset Finder</h3></div>
+      <label class="field"><svg class="i"><use href="#i-search"/></svg><input id="pfUrl" type="url" inputmode="url" placeholder="https://vt.tiktok.com/…" maxlength="500" autocapitalize="none" autocomplete="off" spellcheck="false"></label>
+      <p class="iq-hint">Tempel link video, nanti komentarnya dipindai buat nyari link preset (CapCut, Lightroom, dll).</p>
+      <div class="err" id="pfErr"></div>
+      <button class="btn" type="button" id="pfGo"><svg class="i"><use href="#i-search"/></svg>Cari preset</button>
+      <div class="pf-res" id="pfRes" hidden>
+        <div class="pf-head"><img id="pfAvatar" alt="" referrerpolicy="no-referrer"><div class="pf-meta"><b id="pfAuthor"></b><small id="pfPlatform"></small></div></div>
+        <video id="pfPlay" class="tt-video" controls playsinline preload="metadata" hidden></video>
+        <div class="pf-stats" id="pfStats"></div>
+        <div class="hd" style="margin-top:14px">Link preset ditemukan</div>
+        <div class="pf-list" id="pfList"></div>
+        <div class="pf-empty" id="pfEmpty" hidden>Belum ada link preset yang ketemu di komentar video ini.</div>
+      </div>
+    </div>
+
+    <div id="tEdit" class="pane glass" hidden>
+      <div class="sub-h"><button class="icon-btn" type="button" data-tback="tNotes" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button><h3>Tulis catatan</h3></div>
+      <textarea id="nText" placeholder="Tulis apa saja di sini…" maxlength="20000" spellcheck="false"></textarea>
+      <div class="n-stat" id="nStat"></div>
+      <div class="n-act">
+        <button class="btn" type="button" id="nSave"><svg class="i"><use href="#i-check"/></svg>Simpan</button>
+        <button class="btn red" type="button" id="nDel" style="width:auto;padding:0 20px" aria-label="Hapus catatan"><svg class="i"><use href="#i-trash"/></svg></button>
+      </div>
+    </div>
+  </section>
+  <section class="ai-wrap" data-t="ai" hidden>
+    <header class="ai-hero glass">
+      <div class="orb"><span class="core"><img src="/dev.jpg" alt="" onerror="orbFail(this)"></span></div>
+      <div class="meta">
+        <h2 class="ai-name" id="aiName">ZyrexDep eai Gmni</h2>
+        <div class="ai-sub"><span class="dot"></span><span id="aiSubTxt">Online &middot; asisten AI</span></div>
+      </div>
+      <button class="icon-btn" id="aiEngineBtn" type="button" aria-label="Ganti AI"><svg class="i"><use href="#i-spark"/></svg></button>
+      <button class="icon-btn" id="aiHist" type="button" aria-label="Riwayat obrolan"><svg class="i"><use href="#i-clock"/></svg></button>
+      <button class="icon-btn" id="aiNew" type="button" aria-label="Obrolan baru"><svg class="i"><use href="#i-plus"/></svg></button>
+    </header>
+    <div class="ai-msgs" id="aiMsgs" aria-live="polite"></div>
+    <div class="ai-bar-wrap">
+      <div class="ai-bar glass">
+        <textarea id="aiIn" rows="1" maxlength="1500" placeholder="Tanya ZyrexDep eai..." aria-label="Pesan untuk ZyrexDep eai"></textarea>
+        <button class="ai-send" id="aiSend" type="button" aria-label="Kirim" disabled><svg class="i"><use href="#i-send"/></svg></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<button class="ad-fab" id="adFab" type="button" aria-label="Panel Admin"><svg class="i"><use href="#i-shield"/></svg></button>
+<button class="cg-fab" id="cgFab" type="button" aria-label="Global Chat"><svg class="i"><use href="#i-chat"/></svg><span class="cg-badge" id="cgBadge" hidden>0</span></button>
+<div class="mu-isl" id="muIsl" data-s="idle" role="group" aria-label="Pemutar musik">
+  <button class="mu-c" id="muIslTap" type="button" aria-label="Pemutar musik">
+    <span class="mu-cv" id="muCCv"><svg class="i"><use href="#i-music"/></svg></span>
+    <span class="mu-ttl"><span id="muCT">Musik</span></span>
+    <span class="mu-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  </button>
+  <div class="mu-x" id="muX">
+    <div class="mu-xh">
+      <span class="mu-cv mu-xcv" id="muXCv"><svg class="i"><use href="#i-music"/></svg></span>
+      <div class="mu-xi"><b id="muXT">Belum ada lagu</b><span id="muXA">Buka halaman musik</span></div>
+      <button class="mu-xo" id="muXOpen" type="button" aria-label="Buka halaman musik"><svg class="i"><use href="#i-music"/></svg></button>
+    </div>
+    <div class="mu-tm"><span id="muXC">0:00</span><input class="mu-rg" id="muXR" type="range" min="0" max="1000" value="0" aria-label="Posisi lagu"><span id="muXD">0:00</span></div>
+    <div class="mu-ctl">
+      <button class="mu-b sm" id="muXPrev" type="button" aria-label="Lagu sebelumnya"><svg class="i f"><use href="#i-prev"/></svg></button>
+      <button class="mu-b r10" id="muXRew" type="button" aria-label="Mundur 10 detik"><svg class="i"><use href="#i-rew10"/></svg></button>
+      <button class="mu-b pp mu-pp" id="muXPP" type="button" aria-label="Putar atau jeda"><svg class="i f"><use href="#i-play"/></svg><span class="mu-sp"></span></button>
+      <button class="mu-b r10" id="muXFwd" type="button" aria-label="Maju 10 detik"><svg class="i"><use href="#i-fwd10"/></svg></button>
+      <button class="mu-b sm" id="muXNext" type="button" aria-label="Lagu berikutnya"><svg class="i f"><use href="#i-next"/></svg></button>
+    </div>
+  </div>
+</div>
+<div class="mu-toast" id="muToast" hidden></div>
+<div class="ad-page" id="adPage" hidden>
+  <header class="cg-dock glass">
+    <button class="icon-btn" type="button" id="adBack" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button>
+    <div class="meta"><h3>Panel Admin</h3><div class="cg-sub"><span id="adSub">Memuat…</span></div></div>
+    <span class="ad-ic"><svg class="i"><use href="#i-shield"/></svg></span>
+  </header>
+  <div class="ad-flt" id="adTabs"><button type="button" class="on" data-adt="u">Pengguna</button><button type="button" data-adt="r">Kode Redeem</button></div>
+  <div class="ad-stats" id="adStats"></div>
+  <div class="ad-search glass"><svg class="i"><use href="#i-search"/></svg><input id="adQ" type="text" placeholder="Cari username…"></div>
+  <div class="ad-flt" id="adFlt"></div>
+  <div class="ad-list" id="adList"></div>
+  <div class="ad-list" id="adRd" hidden></div>
+</div>
+<div class="sh-page" id="shPage" hidden>
+  <header class="cg-dock glass">
+    <button class="icon-btn" type="button" id="shBack" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button>
+    <div class="meta"><h3>Toko Zyrex</h3><div class="cg-sub"><span id="shSub">Memuat…</span></div></div>
+    <span class="ad-ic" style="background:linear-gradient(145deg,#ffb84d,#ff7a00)"><svg class="i"><use href="#i-store"/></svg></span>
+  </header>
+  <div class="sh-tabs" id="shTabs" role="tablist" aria-label="Kategori jualan"></div>
+  <div class="sh-body" id="shBody"></div>
+  <div class="sh-toast" id="shToast" hidden></div>
+</div>
+<div class="sh-page jb-page" id="jbPage" hidden>
+  <header class="cg-dock glass">
+    <button class="icon-btn" type="button" id="jbBack" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button>
+    <div class="meta"><h3>JB Public</h3><div class="cg-sub"><span id="jbSub">Memuat…</span></div></div>
+    <span class="ad-ic" style="background:linear-gradient(145deg,#64d2ff,#0a84ff)"><svg class="i"><use href="#i-tag"/></svg></span>
+  </header>
+  <div class="sh-tabs" id="jbTabs" role="tablist" aria-label="JB Public"></div>
+  <div class="jb-q glass" id="jbQBox"><svg class="i"><use href="#i-search"/></svg><input id="jbQ" type="text" maxlength="60" placeholder="Cari barang atau penjual…" autocomplete="off"></div>
+  <div class="sh-body" id="jbBody"></div>
+  <div class="sh-toast" id="jbToast" hidden></div>
+</div>
+<div class="sh-page gm-page" id="gmPage" hidden>
+  <header class="cg-dock glass">
+    <button class="icon-btn" type="button" id="gmBack" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button>
+    <div class="meta"><h3 id="gmTitle">Game</h3><div class="cg-sub"><span id="gmSub">Pilih game</span></div></div>
+    <button class="icon-btn" type="button" id="gmSnd" aria-label="Matikan suara"><svg class="i"><use href="#i-volume"/></svg></button>
+  </header>
+  <div class="sh-body gm-body" id="gmBody"></div>
+  <nav class="gm-dock glass" id="gmDock" aria-label="Menu game">
+    <button type="button" class="on" data-gt="list"><svg class="i"><use href="#i-gamepad"/></svg><span>Game</span></button>
+    <button type="button" data-gt="board"><svg class="i"><use href="#i-crown"/></svg><span>Peringkat</span></button>
+  </nav>
+</div>
+<div class="sh-page" id="rqPage" hidden>
+  <header class="cg-dock glass">
+    <button class="icon-btn" type="button" id="rqBack" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button>
+    <div class="meta"><h3>Request &amp; Laporan</h3><div class="cg-sub"><span>Kirim ke Developer</span></div></div>
+  </header>
+  <div class="sh-body" id="rqBody"></div>
+</div>
+<div class="sh-page" id="rsPage" hidden>
+  <header class="cg-dock glass">
+    <button class="icon-btn" type="button" id="rsBack" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button>
+    <div class="meta"><h3>Panel Reseller</h3><div class="cg-sub"><span id="rsSub">Bagikan role</span></div></div>
+  </header>
+  <div class="sh-body" id="rsBody"></div>
+</div>
+<div class="sh-page" id="mtPage" hidden>
+  <header class="cg-dock glass">
+    <button class="icon-btn" type="button" id="mtBack" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button>
+    <div class="meta"><h3>Maintenance</h3><div class="cg-sub"><span id="mtSub">Atur tool yang ditutup sementara</span></div></div>
+  </header>
+  <div class="sh-body" id="mtBody"></div>
+</div>
+<div class="cg-page" id="cgPage" hidden>
+  <header class="cg-dock glass">
+    <button class="icon-btn" type="button" id="cgBack" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button>
+    <div class="meta"><h3>Global Chat</h3><div class="cg-sub"><span class="cg-dot off" id="cgDot"></span><span id="cgSub">Menghubungkan…</span></div></div>
+    <button class="icon-btn" type="button" id="cgLock" aria-label="Tutup/buka Global Chat" hidden><svg class="i"><use href="#i-lock"/></svg></button>
+  </header>
+  <div class="cg-pin glass" id="cgClosed" hidden style="color:#ff453a"><svg class="i"><use href="#i-lock"/></svg><div class="tx"><b>Global Chat ditutup</b><span>Hanya Developer yang bisa mengirim pesan.</span></div></div>
+  <div class="cg-pin glass" id="cgPin" hidden>
+    <svg class="i"><use href="#i-pin"/></svg>
+    <div class="tx"><b>Disematkan</b><span id="cgPinT"></span></div>
+    <button type="button" id="cgPinGo" aria-label="Lihat pesan"><svg class="i"><use href="#i-back" style="transform:rotate(180deg)"/></svg></button>
+    <button type="button" id="cgPinX" aria-label="Lepas sematan" hidden><svg class="i"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="cg-msgs" id="cgMsgs" aria-live="polite"></div>
+  <div class="cg-rp glass" id="cgRp" hidden><div class="tx"><b id="cgRpN"></b><span id="cgRpT"></span></div><button type="button" id="cgRpX" aria-label="Batal balas"><svg class="i"><use href="#i-x"/></svg></button></div>
+  <div class="cg-pv glass" id="cgPv" hidden><img id="cgPvImg" alt="Foto akan dikirim"><button type="button" id="cgPvX" aria-label="Batal foto"><svg class="i"><use href="#i-x"/></svg></button></div>
+  <div class="cg-bar glass">
+    <button class="cg-att" id="cgAtt" type="button" aria-label="Kirim foto"><svg class="i"><use href="#i-image"/></svg></button>
+    <textarea id="cgIn" rows="1" maxlength="500" placeholder="Tulis pesan…" aria-label="Pesan Global Chat"></textarea>
+    <button class="cg-send" id="cgSend" type="button" aria-label="Kirim" disabled><svg class="i"><use href="#i-send"/></svg></button>
+  </div>
+  <input type="file" id="cgFile" accept="image/*" hidden>
+  <div class="cg-ctx" id="cgCtx" hidden></div>
+  <div class="cg-toast" id="cgToast" hidden></div>
+</div>
+<div class="cg-lb" id="cgLb" hidden><img id="cgLbImg" alt="Foto"></div>
+<div class="sheet-bg" id="aiSheetBg"><section class="sheet tall glass" id="aiSheet" role="dialog" aria-modal="true"></section></div>
+<div class="sheet-bg" id="aiEngSheetBg"><section class="sheet glass" id="aiEngSheet" role="dialog" aria-modal="true"></section></div>
+<div class="ay-dlg" id="ayDlg" role="alertdialog" aria-modal="true" aria-labelledby="ayT">
+  <div class="ay-box">
+    <div class="ay-ic" id="ayIc"></div>
+    <h4 id="ayT"></h4>
+    <p id="ayM"></p>
+    <div class="ay-btns"><button type="button" id="ayNo">Batal</button><button type="button" id="ayOk">Oke</button></div>
+  </div>
+</div>
+<!-- ===== Dock menu + sheet ===== -->
+<div class="mdock" id="mdock" role="menu" aria-label="Menu">
+  <button type="button" role="menuitem" data-m="tema"><svg class="i"><use href="#i-palette"/></svg>Tema</button>
+  <button type="button" role="menuitem" data-m="toko"><svg class="i"><use href="#i-store"/></svg>Toko Zyrex</button>
+  <button type="button" role="menuitem" data-m="anime"><svg class="i"><use href="#i-tv"/></svg>Anime</button>
+  <button type="button" role="menuitem" data-m="komik"><svg class="i"><use href="#i-book"/></svg>Komik</button>
+  <button type="button" role="menuitem" data-m="jb"><svg class="i"><use href="#i-tag"/></svg>JB Public</button>
+  <button type="button" role="menuitem" data-m="redeem"><svg class="i"><use href="#i-gem"/></svg>Redeem Code</button>
+</div>
+<div class="sheet-bg" id="sheetBg"><section class="sheet glass" id="sheet" role="dialog" aria-modal="true"></section></div>
+
+<div class="mu-page" id="muPage" hidden>
+  <header class="mu-top">
+    <button class="icon-btn" type="button" id="muBack" aria-label="Kembali"><svg class="i"><use href="#i-back"/></svg></button>
+    <div class="mu-logo"><span class="mu-lg"><svg class="i"><use href="#i-music"/></svg></span><b>ZyrexMusic</b></div>
+    <button class="mu-av" type="button" id="muAv" aria-label="Profil"></button>
+  </header>
+  <div class="mu-body" id="muBody">
+    <section class="mu-view" id="muVHome">
+      <div class="mu-hello"><h1>Hai, <span id="muHName">kamu</span></h1><p>Cari lagu apa saja, siap diputar.</p></div>
+      <div class="mu-h"><span>Riwayat</span></div><div class="mu-list" id="muHist"></div>
+      <div class="mu-h"><span>Lagu untukmu</span><small class="mu-hot">🔥 lagi naik daun</small></div><div class="mu-list mu-for" id="muFor"></div>
+      <div class="mu-sec"><h3>Album &amp; Playlist</h3></div>
+      <div class="mu-chips mu-tiles" id="muChips" role="tablist" aria-label="Kategori lagu"></div>
+      <div class="mu-h"><span id="muH">Populer</span><button type="button" class="mu-all" id="muAll" hidden aria-label="Putar semua"><svg class="i f"><use href="#i-play"/></svg></button></div>
+      <div class="mu-list" id="muList"></div>
+    </section>
+    <section class="mu-view" id="muVSearch" hidden>
+      <form class="mu-search" id="muForm" autocomplete="off">
+    <svg class="i"><use href="#i-search"/></svg>
+    <input id="muQ" type="search" enterkeyhint="search" maxlength="80" placeholder="Cari lagu atau artis…" aria-label="Cari lagu">
+    <button type="button" class="mu-qx" id="muQx" hidden aria-label="Hapus"><svg class="i"><use href="#i-x"/></svg></button><button type="submit" class="mu-sgo">Cari</button>
+  </form>
+      <div class="mu-rec" id="muRec" hidden></div>
+      <div class="mu-sgl" id="muSgl" hidden></div>
+      <div id="muSIdle"><div class="mu-h"><span>Saran lagu</span><small class="mu-hot">🔥 lagi naik daun</small></div><div class="mu-list" id="muSSug"></div></div>
+      <div id="muSRes" hidden><div class="mu-h"><span id="muSH">Hasil</span></div><div class="mu-list" id="muSList"></div></div>
+    </section>
+    <section class="mu-view" id="muVFav" hidden>
+      <div class="mu-hello"><h1>Favorit</h1><p id="muFavSub">0 lagu tersimpan</p></div>
+      <div class="mu-h"><span>Lagu yang kamu suka</span><button type="button" class="mu-all" id="muFavAll" hidden aria-label="Putar semua"><svg class="i f"><use href="#i-play"/></svg></button></div>
+      <div class="mu-list" id="muFavList"></div>
+    </section>
+    <section class="mu-view" id="muVPl" hidden>
+      <div class="mu-hello"><h1>Playlist</h1><p id="muPlSub">Kumpulan lagumu sendiri</p></div>
+      <form class="mu-newpl" id="muPlForm" autocomplete="off"><input id="muPlName" maxlength="30" placeholder="Nama playlist baru…" aria-label="Nama playlist"><button type="submit"><svg class="i"><use href="#i-plus"/></svg>Buat</button></form>
+      <div id="muPlBox"></div>
+    </section>
+    <section class="mu-view" id="muVPr" hidden>
+      <div class="mu-prof">
+        <div class="mu-pav" id="muPAv"></div>
+        <h2><span id="muPName">User</span><span id="muPVb"></span></h2>
+        <div class="mu-ptags" id="muPTags"></div>
+        <p>Akun yang kamu daftarkan di All Tools ZyrexDep</p>
+        <div class="mu-stats"><div><b id="muSF">0</b><span>Favorit</span></div><div><b id="muSP">0</b><span>Playlist</span></div><div><b id="muSL">0</b><span>Total lagu</span></div></div>
+        <button type="button" class="mu-pout" id="muPOut">Kembali ke aplikasi</button>
+      </div>
+    </section>
+  </div>
+  <div class="mu-mini" id="muMini" role="button" tabindex="0" aria-label="Buka pemutar penuh">
+    <span class="mu-th" id="muMCv"><svg class="i"><use href="#i-music"/></svg></span>
+    <div class="mu-rt"><b id="muMT">-</b><span id="muMA">-</span></div>
+    <button class="mu-b pp mu-pp" id="muMPP" type="button" aria-label="Putar atau jeda"><svg class="i f"><use href="#i-play"/></svg><span class="mu-sp"></span></button>
+    <div class="mu-mp" id="muMP"><i></i></div>
+  </div>
+  <nav class="mu-nav" id="muNav" aria-label="Navigasi musik">
+    <button type="button" class="on" data-v="home"><svg class="i"><use href="#i-home"/></svg>Home</button>
+    <button type="button" data-v="search"><svg class="i"><use href="#i-search"/></svg>Cari</button>
+    <button type="button" data-v="fav"><svg class="i"><use href="#i-heart"/></svg>Favorit</button>
+    <button type="button" data-v="pl"><svg class="i"><use href="#i-list"/></svg>Playlist</button>
+    <button type="button" data-v="pr"><svg class="i"><use href="#i-user"/></svg>Profil</button>
+  </nav>
+  <div class="mu-lyr-bg" id="muLyr" hidden><div class="mu-lyr-h"><div><b id="muLyT">-</b><span id="muLyA">-</span><small id="muLyM"></small></div><button type="button" class="icon-btn" id="muLyX" aria-label="Tutup lirik"><svg class="i"><use href="#i-x"/></svg></button></div><div class="mu-lyr-o" id="muLyO" hidden><span>Sinkron</span><button type="button" id="muLyDn">−0,5 dtk</button><b id="muLyOv">0 dtk</b><button type="button" id="muLyUp">+0,5 dtk</button><button type="button" id="muLyRs">Reset</button></div><div class="mu-lyr-b" id="muLyB"></div></div>
+  <div class="mu-sheetbg" id="muSheet" hidden></div>
+  <div class="mu-full" id="muFull" aria-hidden="true">
+    <div class="mu-fbg" id="muFBg"></div>
+    <div class="mu-fh">
+      <button class="icon-btn" type="button" id="muFClose" aria-label="Tutup pemutar"><svg class="i"><use href="#i-chevd"/></svg></button>
+      <div class="mid">SEDANG DIPUTAR</div><span class="sp"></span>
+    </div>
+    <div class="mu-fcv" id="muFCv"><svg class="i"><use href="#i-music"/></svg></div>
+    <div class="mu-ft">
+      <div class="tx"><b id="muFT">-</b><span id="muFA">-</span></div>
+      <button class="mu-heart" id="muFav" type="button" aria-label="Suka"><svg class="i"><use href="#i-heart"/></svg></button>
+    </div>
+    <div class="mu-fp"><div class="mu-tm"><span id="muFC">0:00</span><input class="mu-rg" id="muFR" type="range" min="0" max="1000" value="0" aria-label="Posisi lagu"><span id="muFD">0:00</span></div></div>
+    <div class="mu-fc">
+      <button class="mu-b" id="muFPrev" type="button" aria-label="Lagu sebelumnya"><svg class="i f"><use href="#i-prev"/></svg></button>
+      <button class="mu-b r10" id="muFRew" type="button" aria-label="Mundur 10 detik"><svg class="i"><use href="#i-rew10"/></svg></button>
+      <button class="mu-b pp mu-pp" id="muFPP" type="button" aria-label="Putar atau jeda"><svg class="i f"><use href="#i-play"/></svg><span class="mu-sp"></span></button>
+      <button class="mu-b r10" id="muFFwd" type="button" aria-label="Maju 10 detik"><svg class="i"><use href="#i-fwd10"/></svg></button>
+      <button class="mu-b" id="muFNext" type="button" aria-label="Lagu berikutnya"><svg class="i f"><use href="#i-next"/></svg></button>
+    </div>
+    <div class="mu-f2">
+      <button class="mu-b sm" id="muFShuf" type="button" aria-label="Acak"><svg class="i"><use href="#i-shuffle"/></svg></button>
+      <button class="mu-b sm" id="muFRep" type="button" aria-label="Ulangi"><svg class="i"><use href="#i-repeat"/></svg></button>
+    </div>
+    <button class="mu-flc" id="muFLyr" type="button" aria-label="Buka lirik"><span class="k"><svg class="i"><use href="#i-list"/></svg>LIRIK</span><b id="muFLn">Ketuk untuk melihat lirik</b><em id="muFLx"></em></button>
+  </div>
+</div>
+<nav class="tabbar" id="tabbar" aria-label="Navigasi utama">
+  <button class="tab on" data-go="utama" type="button"><svg class="i"><use href="#i-home"/></svg>Utama</button>
+  <button class="tab" data-go="ai" type="button"><svg class="i"><use href="#i-spark"/></svg>AI</button>
+  <button class="tab" data-go="profile" type="button"><svg class="i"><use href="#i-user"/></svg>Profile</button>
+  <button class="tab" data-go="dev" type="button"><svg class="i"><use href="#i-code"/></svg>Dev</button>
+  <button class="tab" data-go="tools" type="button"><svg class="i"><use href="#i-grid"/></svg>Tools</button>
+</nav>
+
+<input type="file" id="file" accept="image/*" hidden>
+
+<!-- ===== Intro: masuk goa kristal ===== -->
+<div class="stage" id="stage" aria-hidden="true">
+  <script>try{if(localStorage.getItem("ayd_cave_seen")==="1"){window.__caveSeen=1;document.getElementById("stage").classList.add("skip")}}catch(e){}</script>
+  <div class="cv-far"></div>
+  <div class="cv-in" id="cvIn">
+    <svg class="walls" id="cvWalls" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+    <div class="cv-amb"></div>
+    <div class="cv-vig"></div>
+    <div id="cvCrys"></div>
+    <div class="cv-logo"><span class="cv-ring"></span><div class="cv-photo">Z<img src="/dev.jpg" alt="Zyrex" onerror="this.remove()"></div></div>
+    <div class="cv-cap"><small>Pembuat APK</small><b>Zyrex</b></div>
+    <div class="cv-dust" id="cvDust"></div>
+  </div>
+  <div class="cv-mouth"><svg id="cvMouth" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice"></svg></div>
+  <div class="cv-sk" aria-hidden="true"><div class="cv-sph">Z<img src="/dev.jpg" alt="Zyrex" onerror="this.remove()"></div><b>All Tools ZyrexDep</b><small>Skip animasion</small></div>
+  <div class="cv-fp" id="cvFp" role="button" aria-label="Tahan sidik jari untuk masuk">
+    <svg class="fp-ring" viewBox="0 0 100 100"><defs><linearGradient id="fpG2" gradientUnits="userSpaceOnUse" x1="0" y1="100" x2="100" y2="0"><stop offset="0" stop-color="#38e1ff"/><stop offset=".5" stop-color="#8b5cff"/><stop offset="1" stop-color="#ff4fd8"/></linearGradient></defs><circle class="bg" cx="50" cy="50" r="46"/><circle class="pg" id="fpPg" cx="50" cy="50" r="46"/></svg>
+    <svg class="fp-svg" id="fpSvg" viewBox="0 0 64 64"><defs><linearGradient id="fpG" gradientUnits="userSpaceOnUse" x1="0" y1="64" x2="64" y2="0"><stop offset="0" stop-color="#38e1ff"/><stop offset=".5" stop-color="#8b5cff"/><stop offset="1" stop-color="#ff4fd8"/></linearGradient><clipPath id="fpClip"><rect id="fpRect" x="-4" y="68" width="72" height="0"/></clipPath></defs><g class="fp-base" id="fpBase"></g><g class="fp-fill" id="fpFill" clip-path="url(#fpClip)"></g></svg>
+  </div>
+  <div class="cv-hint" id="fpHint"><b id="fpPct">0%</b><small>Tahan sidik jari untuk masuk</small></div>
+</div>
+
+<script src="/js/chess-engine.js?v=98"></script>
+<script src="/js/api.js?v=98"></script>
+<script src="/js/app.js?v=101"></script>
+<script src="/js/uno-engine.js?v=98"></script>
+<script src="/js/games.js?v=98"></script>
+<script src="/js/uno.js?v=98"></script>
+<script src="/js/geo-core.js?v=98"></script>
+<script src="/js/geo.js?v=98"></script>
+<script src="/js/maint.js?v=98"></script>
+<script src="/js/reseller.js?v=102"></script>
+<script src="/js/request.js?v=1"></script>
+<script src="/js/mention.js?v=1"></script>
+<script src="/js/vn.js?v=1"></script>
+<script src="/js/emoji.js?v=1"></script>
+<script src="/js/paper.js?v=1"></script>
+<script src="/js/cave.js?v=98"></script>
+<script src="/js/theme.js?v=107"></script>
+<script src="/js/spamotp.js?v=2"></script>
+<script src="/js/zproteksi.js?v=98"></script>
+</body>
+</html>

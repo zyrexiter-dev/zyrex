@@ -1,0 +1,8 @@
+{
+  "name": "all-tools-zyrexdep",
+  "version": "1.0.0",
+  "description": "All Tools ZyrexDep: akun, profil, dan info developer",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "^4.19.2", "yt-search": "^2.12.1" }
+}
